@@ -1,0 +1,192 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500');
+
+@font-face {
+    font-family: "Gibson-SemiBold";
+    src: url("https://marketingassets.cloudsna.com/prod/fonts/stansberry/gibson/gibson-semibold-webfont.eot?#iefix") format("eot"), url("https://marketingassets.cloudsna.com/prod/fonts/stansberry/gibson/gibson-semibold-webfont.woff") format("woff"), url("https://marketingassets.cloudsna.com/prod/fonts/stansberry/gibson/gibson-semibold-webfont.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Gibson";
+    src: url("https://marketingassets.cloudsna.com/prod/fonts/stansberry/gibson/gibson-webfont.eot?#iefix") format("eot"), url("https://marketingassets.cloudsna.com/prod/fonts/stansberry/gibson/gibson-webfont.woff") format("woff"), url("https://marketingassets.cloudsna.com/prod/fonts/stansberry/gibson/gibson-webfont.ttf") format("truetype");
+}
+
+@import url('https://fonts.googleapis.com/css?family=Arvo:400,700');
+
+body {
+    background:url('https://s3.us-east-2.amazonaws.com/10xinnovationevent.com/img/portal-bg.png');
+}
+
+.valign{
+    padding: 0 0 20px 5px;
+    margin-bottom: 20px;
+}
+
+
+
+h1{
+	color:#fff;
+    font-family: "Gibson-SemiBold", Helvetica, Arial, sans-serif;
+    font-size: 35px;
+    font-weight: normal;
+    line-height: 45px;
+    display:none;
+}
+
+.primaryCTA {
+    background-color: orangered;
+}
+
+.panel{
+	margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 0px;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+
+.img-responsive {
+    width:300px;
+}
+
+.panel-primary{
+	border-color: #ddd;
+}
+
+.panel-body:first-child{
+	padding: 0px !important;
+}
+
+.panel-body{
+	padding: 15px !important;
+}
+
+.panel-primary>.panel-heading {
+    color: #072E71;
+    background-color: #f8f8f8;
+    border-color: #ddd;
+}
+
+.panel-primary>.panel-heading {
+        color: #fff;
+    background-color: #072E71;
+    border-color: none;
+    font-family: 'Gibson-SemiBold', sans-serif;	font-size: 18px;
+    letter-spacing:1.5px;
+    font-weight: normal;
+    line-height: 20px;
+
+	padding: 10px 0 10px 20px;
+}
+
+.form-control{
+	border-radius: 0px;
+}
+
+._ngcontent-c2 .panel-body{
+	padding: 15px;
+}
+
+p{
+	margin: 0 0 10px 10px;
+}
+
+h2{
+	font-size: 28px;
+}
+
+.panel-heading{
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+}
+
+b, strong {
+    font-weight: 500;
+}
+.scroll-overflow[_ngcontent-c1] {
+    max-height: 21em;
+    overflow-y: scroll;
+    padding: 10px !important;
+}
+
+.col-sm-8 p{
+    margin: 0 0 10px 10px;
+    color: #555555;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.col-sm-2{
+	margin-top:10px;
+	width: auto !important;
+}
+.ticker-wrap {
+    background: -moz-linear-gradient(center top, rgba(27, 79, 159, 1) 0%, rgba(6, 44, 111, 1) 100%) repeat scroll 0 0 #062c6f; 
+    background: -webkit-linear-gradient(top, rgba(27, 79, 159, 1) 0%, rgba(6, 44, 111, 1) 100%) repeat scroll 0 0 #062c6f;
+    background: linear-gradient(to bottom, rgba(27, 79, 159, 1) 0%, rgba(6, 44, 111, 1) 100%) repeat scroll 0 0 #062c6f;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    height: 30px;
+    box-sizing: content-box;
+    z-index: 9999;
+}
+.ticker-wrap .ticker {
+    display: inline-block;
+    position: absolute;
+    height: 30px;
+    line-height: 30px;  
+    white-space: nowrap;
+    padding-right: 100%;
+    box-sizing: content-box;
+    -webkit-animation-iteration-count: infinite; 
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-name: ticker;
+    animation-name: ticker;
+    -webkit-animation-duration: 90s;
+    animation-duration: 90s;
+}
+.ticker2 {
+    -webkit-animation-delay: 35s;
+    animation-delay: 35s;
+    }
+.ticker-wrap .ticker-item {
+    display: inline-block;
+    padding: 0 2rem;
+    font-size: 16px;
+    color: white;
+    font-family: "ProximaNova-Bold",sans-serif; 
+}
+.ticker-wrap .ticker-item span {
+    color: #49da59;
+}
+@-webkit-keyframes ticker {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    visibility: visible;
+  }
+
+  100% {
+    -webkit-transform: translate3d(-6920px, 0, 0);
+    transform: translate3d(-6920px, 0, 0);
+  }
+}
+@keyframes ticker {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+
+  100% {
+    -webkit-transform: translate3d(-6920px, 0, 0);
+    transform: translate3d(-6920px, 0, 0);
+  }
+}

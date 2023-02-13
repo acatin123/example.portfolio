@@ -1,0 +1,1087 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+    <title></title>
+    <!-- Put CSS Calls here -->
+    <link href="https://secure-prod-assets.s3.amazonaws.com/common/css/bootstrap/bootstrap.min.4.3.1.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,700,700i" rel="stylesheet">
+    <link href="https://secure-prod-assets.s3.amazonaws.com/common/css/elements.css" rel="stylesheet">
+    <link href="https://secure-prod-assets.s3.amazonaws.com/common/css/html-pages/html-pages.ver.002.css" rel="stylesheet">
+    <!-- Put Javascript Calls here -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<!--    THESE SCRIPTS BELOW ARE USED FOR VIDEO EMBEDS-->
+<!--    <script type="text/javascript" src="https://secure-prod-assets.s3.amazonaws.com/common/js/videoManager.js"></script>-->
+<!--    <script type="text/javascript" src="https://secure-prod-assets.s3.amazonaws.com/common/js/exitpopManager.js"></script>-->
+    <script>
+//THIS VAR IS USED FOR AN EXIT-POP RELATED TO THE VIDEO
+//var htmlLink = "marketingassets.cloudsna.com/prod/common/CHN/OrderForm/1572450621496.html";
+
+var urlParams;
+ (window.onpopstate = function () {
+    var match,
+        pl     = /\+/g,  // Regex for replacing addition symbol with a space
+        search = /([^&=]+)=?([^&]*)/g,
+        decode = function (s) { return decodeURIComponent(s.replace(pl, " ")); },
+        query  = window.location.search.substring(1); 
+    urlParams = {};
+    while (match = search.exec(query))
+       urlParams[decode(match[1])] = decode(match[2]);
+ })();
+
+    /* General Event Data    
+    dataLayer.push({
+    'event':'EVENT NAME',  
+    'campaign':globalStoreData.site.campaignInfo[0].slice(7),  
+    'gaPageTitle':'PUB Campaign ASSETTYPE',  
+    'gaPageView':'/PUB-Campaign-ASSETTYPE/' + urlParams["cid"] + '/' + urlParams["eid"],  
+    'eid':urlParams["eid"],  
+    'cid':urlParams["cid"],  
+    'pubcode':'PUB'  
+    }); 
+    */
+    </script>
+
+    <style>
+img{
+            margin-bottom: 20px !important;
+        }
+        ul.hideDots{
+            list-style:none;
+        }
+        .beRed {
+            color:#B30B0D;
+        }
+        .showcase-video{
+            filter:opacity(0.6);
+            width: 1200px;
+            top:50%;
+        }
+        .showcase-inner h1, h3{
+            font-family: "Gibson-SemiBold","ProximaNova-Bold",arial,sans-serif;
+        }
+        .showcase-inner h3{
+            font-size: 36px;
+        }
+/*
+        .showcase-inner h1, h3, h4{
+            color:#2f5496;
+        }
+*/
+ 
+        .col-fullwide.blockcopy {
+            background-image: url(https://assets.stansberryresearch.com/uploads/2019/BBRS_2019/Web/bg-gradient-rd.png),
+            url("https://secure-prod-assets.s3.amazonaws.com/common/images/backgrounds/dollar-yuan-background.jpg");
+        }
+        .col-fullwide h3 {
+            font-size: 40px;
+            line-height: 46px;
+        }
+        .source{
+            font-size: 12pt;
+            text-align: right;
+            color: #999999;
+            line-height: 16px;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+        .logo{
+            display:block;
+            width:50%;
+        }
+        .item-graphic{
+            display:block;
+            float:right;
+            width:40%;
+            margin-left:15px;
+        }
+        /*arrow w/ bounce animation*/
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+            -ms-transform: translateY(0);
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+          }
+            40% {
+            -ms-transform: translateY(-6px);
+            -webkit-transform: translateY(-6px);
+            transform: translateY(-6px);
+          }
+            60% {
+            -ms-transform: translateY(-4px);
+            -webkit-transform: translateY(-4px);
+            transform: translateY(-4px);
+          }
+        }
+        .arrow {
+            position: relative;
+            bottom: -22px;
+            left: 50%;
+            margin-left:-12px;
+            width: 24px;
+            height: 24px;
+            background: transparent url("https://static.cloudsna.com/store/PROD/images/SIR/gilder-book/angle-down-white.png") no-repeat scroll 0 0 / 24px;
+        }
+        .bounce {
+          animation: bounce 2s infinite;
+        }
+        /*Circle with border*/
+        .arrow-tab {
+            background-color:#112BA2;
+            border: 4px solid #fff;
+            border-radius: 50%;
+            display: table;
+            font-size: 1px;
+            height: 70px;
+            left: 50%;
+            margin: -30px auto 0;
+            opacity: 1;
+            padding-top: 4px;
+            position: absolute;
+            text-align: center;
+            width: 70px;
+            z-index: 0;
+            transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
+        }
+        #gLogo{
+            display:block; float:right; width:25%; margin-left:15px;
+        }
+        #list-bundle hr{
+            height:2px;
+            background-color:#373737;
+        }
+        @media screen and (min-width: 1200px){
+            .arrow{
+                bottom: -20px;
+                margin-left:-15px;
+                width: 30px;
+                height: 30px;
+                background: transparent url("https://static.cloudsna.com/store/PROD/images/SIR/gilder-book/angle-down-white.png") no-repeat scroll 0 0 / 30px;
+            }
+        }
+        /*end arrow bounce animation*/
+        .emphasis{
+            margin-left: 40px;
+            margin-bottom: 20px;
+        }
+        .listOut p{
+            margin-left: 40px;
+            margin-bottom: 0px;
+        }
+        .sig{
+            margin-left:50px;
+        }
+        .imgCenter{
+            display: block;
+            margin: 0 auto;
+            width: 100%;
+        }
+        .item {
+            max-width: 300px;
+            margin: 10px auto;
+        }
+        
+/* exit pop things */
+   #exitpopup a.blue{
+    float: left;
+    line-height: 20px;}
+#exitpopup a.red {
+	line-height: 20px;
+	float: right;
+}
+#exitpopup {
+	text-align: left;
+	border: 6px solid #c00;
+	background: #fff;
+	padding: 8px;
+	width: 100%;
+	max-width: 600px;
+	height: auto;
+	z-index: 999999;
+	display: none;
+	position: fixed;
+	margin: 0 auto;
+}
+#exitpopup_bg {
+	display: none;
+	top: 0;
+	width: 100%;
+	height: auto;
+	position: fixed;
+	background: rgb(0, 0, 0);
+	opacity: 0.8;
+	z-index: 999998;
+}
+#exitpopup .innerCopy {
+	position: relative;
+	background: transparent;
+	border-radius: 8px;
+	color: #2b669a;
+	padding: 0px 40px;
+}
+#exitpopup a.red {
+	padding: 16px 0px;
+	font-family: "Gibson-SemiBold", arial, sans-serif;
+	text-decoration: none;
+	border-radius: 5px;
+	background: #de0000;
+	color: #fff;
+	font-size: 24px;
+	text-align: center;
+	border-top: 1px solid #ff9999;
+	border-bottom: 1px solid #920000;
+	width: 230px;
+	display: block;
+	margin: 10px auto;
+	cursor: pointer;
+}
+#exitpopup a.blue {
+	padding: 16px 0px;
+	font-family: "Gibson-SemiBold", arial, sans-serif;
+	text-decoration: none;
+	border-radius: 5px;
+	background: #2b669a;
+	color: #fff;
+	font-size: 24px;
+	text-align: center;
+	border-top: 1px solid #55afff;
+	border-bottom: 1px solid #1d3456;
+	width: 230px;
+	display: block;
+	margin: 10px auto;
+	cursor: pointer;
+}
+#exitpopup h2 {
+	font-family: "Gibson-SemiBold", arial, sans-serif;
+	color: #c00;
+	font-size: 50px;
+	line-height: 50px;
+}
+#exitpopup p {
+	font-family: "Gibson", arial, sans-serif;
+	color: #000;
+}
+.closeMe {
+	text-align: center;
+	font-size: 12px;
+}
+@media screen and (max-width: 500px) {
+.showcase-inner h4 {
+	font-size: 18px;
+}
+	#exitpopup {
+		width: 100%;
+	}
+	#exitpopup .innerCopy {
+		width: 100%;
+	}
+}
+#mobileAlert {
+	background: #EEEEEE;
+	padding: 20px 20px 40px 20px;
+	height: 100%;
+	display: none;
+}
+#mobileAlert h1 {
+	font: 30px/40px 'Gibson-SemiBold', sans-serif;
+	color: #222222;
+	text-align: center;
+	font-weight: 900;
+}
+#mobileAlert p {
+	font: 19px/30px 'Gibson', sans-serif;
+	color: #222222;
+	text-align: center;
+	font-weight: 400;
+	padding-top: 20px;
+}
+#mobileAlert .goVideo {
+	padding: 22px;
+	background: #5CA646;
+	color: #ffffff !important;
+	font-size: 22px;
+	font-weight: 500;
+	text-align: center;
+	width: 100%;
+	height: 82px;
+	margin: 0 auto;
+	margin-top: 30px !important;
+	margin-bottom: 15px !important;
+	border-radius: 0px;
+	text-decoration: none !important;
+	border-style: none;
+}
+#mobileAlert .goHTML {
+	padding: 22px;
+	background: #00559F;
+	color: #ffffff !important;
+	font-size: 22px;
+	font-weight: 500;
+	text-align: center;
+	width: 100%;
+	height: 82px;
+	margin: 0 auto;
+	border-radius: 0px;
+	text-decoration: none !important;
+	border-style: none;
+}
+#mobileAlert a:link {
+	text-decoration: none !important;
+	color: #ffffff !important;
+}
+#mobileAlert .goVideo a:active {
+	background-color: #4F8E3C;
+	text-decoration: none !important;
+	color: #ffffff !important;
+}
+#mobileAlert a:visited {
+	text-decoration: none !important;
+	color: #ffffff !important;
+}
+#mobileAlert .goHTML a:active {
+	background-color: #003766;
+	text-decoration: none !important;
+	color: #ffffff !important;
+}
+/* end exit pop things */
+
+        /*Media Queries*/
+        @media screen and (max-width:1200px){
+            .arrow{
+                bottom: -25px;
+                margin-left:-15px;
+                width: 30px;
+                height: 30px;
+                background: transparent url("https://static.cloudsna.com/store/PROD/images/SIR/gilder-book/angle-down-white.png") no-repeat scroll 0 0 / 30px;
+            }
+        }
+        @media screen and (max-width: 1024px) {
+            .showcase-inner h3{
+
+                font-size: 30px;
+            }   
+        }
+        @media screen and (max-width: 769px) {
+            .showcase-inner h3{
+                font-size: 26px;
+                line-height: 28px;
+            }  
+            .bullet.check{
+                background:none;
+                padding:0;
+            }
+            .item-graphic{
+                width:55%;
+            }
+            #gLogo{
+                margin-left:0;
+            }
+            #list-bundle{
+                padding-left:0;
+            }
+            
+        }
+        @media screen and (max-width: 712px){
+            .showcase-inner h1{
+                font-size: 50px;
+                line-height: 50px
+            }
+            .showcase-intro{
+                height: 700px;
+            }
+        }
+        @media screen and (max-width: 480px){
+            .showcase-intro{
+max-width:600px;
+}
+.showcase-inner h1{
+                font-size: 40px;
+                line-height: 40px;
+                padding:0;
+            }
+            .showcase-inner h3{
+                font-size: 22px;
+                line-height: 26p;
+            }
+            .showcase-inner h4{
+                font-size: 16px;
+            }
+            .topImg{
+                display: none;
+            }
+            .col-fullwide h3 {
+                font-size: 22px !important;
+                line-height: 26px !important;
+            }
+            #gLogo{
+                width:40%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<div class="showcase-intro"><img alt="background" class="showcase-video" src="https://secure-prod-assets.s3.amazonaws.com/common/images/backgrounds/stocks-night-light-background.jpg" />
+	<section class="showcase-inner">
+		<h1>“My entire team and I are watching <span style="color: #faed27;">November 27th.</span></h1>
+		<h3>Here’s the $22.7 billion reason why you should be, too.”</h3>
+		<h4 style="text-align: right;"><strong>–</strong> <strong>Dr. Steve Sjuggerud</strong></h4>
+		<!--<div id="vidHolder">
+			<div id="vidBorder">
+				<!-- Video Embed 
+				<div style="max-width: 670px; margin: 20px auto 0px;">
+					<video-js data-account="5298920694001" data-player="rkj9vsdUM" data-embed="default" controls="controls" data-video-id="6100814039001" data-playlist-id="" data-application-id="" class="vjs-fluid"></video-js>
+				</div>
+			</div>
+		</div>-->
+	</section>
+</div>
+<article>
+	<div class="main-middle">
+		<div class="row">
+			<div class="arrow-tab">
+				<div class="arrow"></div>
+			</div>
+			<div class="col-content centered" style="padding-top: 50px;">
+				<p id="top"></p>
+				<p>Hi,</p>
+				<p>My name is Dr. Steve Sjuggerud.</p>
+				<p>A few years ago, I uncovered the biggest financial story I've seen in 25 years.</p>
+				<p>This story has helped me pinpoint exact moments, down to the exact dates and times, that hundreds of billions of dollars will pour into a specific group of stocks.</p>
+				<p><strong>Now, I’m preparing for the next move – Wednesday, November 27 at 3:59 p.m. Eastern time.</strong></p>
+				<p><strong>On this date, nearly every major investment bank on Wall Street and 97 of the top 100 global money managers will be legally required to buy a specific list of stocks, whether they want to or not.</strong></p>
+				<p>I've already seen this happen twice in the past year.</p>
+				<p>This spring, I predicted that on May 31, roughly $16 billion would flow into a short list of stocks.</p>
+				<p>It did.</p>
+				<p>Readers who bought my recommendations are now perfectly positioned today to see their money potentially grow by at least 100%, maybe more, in the coming months.</p>
+				<p>Then it happened again, as I predicted, on August 27th.</p>
+				<p>And if you prepared as I've instructed over the past couple years, you could have had the chance to reap the benefits.</p>
+				<p>Like John L. who followed my advice since the beginning and said,</p>
+				<p><em>"I am up over 30% following Steve’s recommendations. More than $58,000 in profits. Thank you, Steve! You are the man!"</em></p>
+				<p>Now, it’s about to happen again – an additional $22.7 billion is about to move into a short list of stocks yet again.</p>
+				<p>This time on November 27.</p>
+				<p>And I want YOU to be prepared.</p>
+				<p>It’s a story I've been trying to spread for years.</p>
+				<p>The most “sure thing” I’ve ever seen in the financial markets.</p>
+				<p>And even though I've written dozens of articles about it, the mainstream financial press has not caught on yet.</p>
+				<p>It hardly even registers on the news...</p>
+				<p>That’s because this is an event buried in the weeds of financial documents, as I’ll show you in a moment. It’s just not a story that can compete with the latest presidential tweetstorm.</p>
+				<p>But it’s really quite simple.</p>
+				<p>A huge wrong is being corrected in the financial markets. And billions are shifting overnight.</p>
+				<p>It doesn't matter what the market sentiment is. This event is already in motion.</p>
+				<p>And historically, the results of similar reallocations are stunning.</p>
+				<p>In fact, a scholar from the University of Pennsylvania Wharton School of business looked into similar situations such as this one.</p>
+				<p>He analyzed 444 occurrences like this one, from 1990 to 2015.</p>
+				<p><em>And in every single case, the stock connected to this type of event went up. </em></p>
+				<p>I don't know of another investment strategy in the entire world that has a perfect track record like this one does.</p>
+				<p>I've been tracking this event for over four years now... and have been doing everything I can to spread the word.  </p>
+				<p>I even filmed a full-length documentary about it that’s been viewed over 2.5 million times.</p>
+				<p>And so far, everything has occurred just as I predicted.</p>
+				<p>You see, most of the time, when you invest in a stock, you are making an educated guess about what investors are going to think of this company in the future...</p>
+				<p>The situation we have today is completely different though.</p>
+				<p>We know for a fact, <strong>that $22.7 billion will to flow into a group of stocks on November 27, 2019...</strong></p>
+				<p>I think that this opportunity is the safest way possible to potentially double or even triple your investment in the next 24 months.</p>
+				<p>It's not too late for you to join the folks who are already making life-changing gains with this opportunity.</p>
+				<p>Like Pam M. who told me,</p>
+				<p class="testimonial"><em>"I normally would not have touched this with a 10-ft pole but I'm up $103,020.00 from Feb 2017."</em></p>
+				<p>Or Brian L. who told me that he used my advice to pay off two mortgages!</p>
+				<p>So today, I'm here to explain a few things...</p>
+				<ol style="margin-top: 20px;">
+					<li>Why this money is flowing into these stocks and who's behind it.</li>
+					<li>Why it's not too late for you to join the folks who have already bought houses, cars, or paid off their mortgages with this opportunity.</li>
+				</ol>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-fullwide blockcopy" style="margin-top: 0;">
+			<h3>The Biggest Story of My Career</h3>
+		</div>
+	</div>
+	<div class="main-middle after-split">
+		<div class="row">
+			<div class="col-content centered">
+				<p>As a former stockbroker and hedge fund manager, I’ve covered hundreds of different ways to make money in the markets...</p>
+				<p>Plus, I've traded almost every type of investment or asset class there is.</p>
+				<p>But this is by far the biggest investment opportunity I've seen.</p>
+				<p>I'm the only independent analyst I know of who can say they've been investigating this story since 2015...</p>
+				<p>The opportunity has to do with one of the greatest phenomena in modern finance... the rise of passive investing.</p>
+				<p>You may not realize it, but since 2005, investors have put increasingly more money into "passive" investments tied to an index... and less into "active" funds managed by banks and hedge funds.</p>
+				<p>During the second quarter of 2019, funds that track the U.S. stock market took in 60% more money than they did in 2018, according to data from Morningstar.</p>
+				<p>Take a look.</p>
+				<img class="imgCenter" src="https://s3.amazonaws.com/assets.stansberryresearch.com/mkt/CHN/charts/CHN+charts_Equity+Fund+Assets.jpg" alt="Equiy Fund Assets" />
+				<p>Passive investing is pretty straightforward. When you buy an ETF or an index fund, you are essentially buying fractional shares of all the stocks it contains.</p>
+				<p>So if you're a passive investor who buys an index fund that tracks the S&amp;P 500, for example, you'll own fractional shares of all the companies that make up the index. But you'll own more of Microsoft (MSFT), which has one of the highest weightings,
+					and less of Under Armour (UA) which has one of the smaller weightings.</p>
+				<p>But here's what most people don't know...</p>
+				<p>Whenever a stock is added or removed from an index... the passive money that tracks that index is legally required to buy or sell that security at a specific date and time.</p>
+				<p>If you own an ETF or index fund, you likely never see this happening… but billions of dollars shift around behind the scenes.</p>
+				<p>And that creates a unique opportunity if you happen to know which stocks are being dropped, and which are being added.</p>
+				<p>It happens electronically, in an instant.</p>
+				<p>For example, when Radio Shack (RSH) was dropped from the S&amp;P 500 on June 30, 2011, the several trillion dollars “pegged” to the index needed to make the same change.</p>
+				<p>Radio Shack typically traded around 3 million shares per day.</p>
+				<p>But on the day they were dropped from the index, an incredible 29 million shares changed hands. Nearly <strong>10-times the normal trading volume!</strong><strong> </strong></p>
+				<p>Because the big money tracking the S&amp;P 500 was legally required to make this change at the exact same moment.</p>
+				<p>Watch what happened next…</p>
+				<img class="imgCenter" src="https://s3.amazonaws.com/assets.stansberryresearch.com/mkt/CHN/charts/chart-rsh.jpg" alt="Radio Shack RSH chart" />
+				<p>Radio Shack plummeted.</p>
+				<p>Meanwhile, an oil company called Marathon Petroleum Corporation (MPC) took its place in the index, ultimately <strong>soaring over 254%.</strong></p>
+				<img class="imgCenter" src="https://s3.amazonaws.com/assets.stansberryresearch.com/mkt/CHN/charts/CHN+charts_MPC.jpg" alt="Marathon MPC chart" />
+				<p>As you can see… you can often make the most money by getting in BEFORE the switch…</p>
+				<p>That’s why I rushed to get this message out to you before November 27.</p>
+				<p>This is the exact situation that’s playing out right now except with MUCH more money flowing into a group of stocks most investors are ignoring…</p>
+				<p>But you might be wondering how I know all this?</p>
+				<p>And who gets to decide which companies are added to or dropped from an index?</p>
+				<p>Well, it’s not the SEC, the IMF, or the Federal Reserve, as you might expect...</p>
+				<p>It’s the under-the-radar financial firms who actually create the indexes that everyone else must follow.</p>
+				<p>And one of the biggest and most influential index firms is called MSCI. The MSCI – <strong>or Morgan Stanley Capital International</strong> – is one of the most powerful financial groups on the planet.</p>
+				<p>$14.8 trillion – which is more than eight times the GDP of Texas – must be allocated according to the MSCI's decisions.</p>
+				<p>It's like they can release a valve and flood any stock they choose with cash.</p>
+				<p>That's why 97 of the top 100 global investment managers listen to this group.</p>
+				<p>MSCI has been around for the past 45 years. And it currently controls 160,000 of the global indexes that mutual funds, pensions funds, and insurance firms must follow.</p>
+				<p>That means if you have a 401(k) or you own an ETF or a mutual fund... odds are the MSCI impacts your money in a big way, whether you realize it or not.</p>
+				<p>They are probably the single biggest authority on Wall Street in deciding which stocks are added to or removed from world stock market indexes.</p>
+				<p><strong><em>We know for a fact, with as much certainty as possible, that MSCI is making a major change to one of its largest indexes on November 27. </em></strong></p>
+				<p>And all you have to do, to potentially double or triple your money, is to get your money there FIRST... which means acting now.</p>
+				<p class="indent">Ray has already added $100,000 to his $500,000 portfolio with an early foray into this idea that I shared with him... Charles G. invested $70,000 and has already made a $69,000 profit... and Ronald T. tells me he's up $11,000 on a single trade.</p>
+				<p>All because I told them some little-known information about...</p>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-fullwide blockcopy" style="margin-top: 0;">
+			<h3>“The World's Most Powerful Stock Picker”</h3>
+		</div>
+	</div>
+	<div class="main-middle after-split">
+		<div class="row">
+			<div class="col-content centered">
+				<p>First, it's important you realize that 94% of American pension fund stock assets... 320 ETFs... trillions of dollars in mutual funds... and retirement accounts, <u>are legally required to follow MSCI's directives</u>.</p>
+				<p>If you pull up nearly any prospectus for these vehicles... (a legally binding financial disclosure document)... there's a strong chance you'll find a connection to MSCI.</p>
+				<p>Take BlackRock, for example...</p>
+				<p>It's the largest money manager in the world... with over 135 investment teams in 30 countries.</p>
+				<p>Here's an excerpt from the prospectus of one of their $40 billion funds.</p>
+				<img class="imgCenter" src="https://s3.amazonaws.com/assets.stansberryresearch.com/mkt/CHN/image-prospectus.jpg" alt="The Underlying Index" />
+				<p><br />You can see right here that this investment is "sponsored by" MSCI and therefore <strong>must follow whatever MSCI tells it to do...</strong></p>
+				<p>Or consider Fidelity, which serves 30 million individual investors... and processes over 649,000 trades per day.</p>
+				<p>Here's a snapshot of one of their funds...</p>
+				<img class="imgCenter" src="https://s3.amazonaws.com/assets.stansberryresearch.com/mkt/CHN/image-fidelity.jpg" alt="Fidelity funds" />
+				<p></p>
+				<p>It holds nearly $4.7 billion in portfolio net assets...</p>
+				<p>But when you examine the prospectus, you can see that all the fund does is follow MSCI's recommended allocations.</p>
+				<p>And it's the same thing everywhere you look: Northern Trust... iShares... Deutsche Bank... SPDR... Legg Mason... State Street... Goldman Sachs... JPMorgan...</p>
+				<p>I could go on... but my point is simple.</p>
+				<p>MSCI has the authority to move literally trillions of dollars around the globe with a stroke of a pen.</p>
+				<p>And on November 27, MSCI is forcing its big-name clients to make a major stock purchase.</p>
+				<p>That's why I'm urging you to get your money there first.</p>
+				<p>While no investment is guaranteed, this type of situation has a jaw-dropping track record.</p>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-fullwide blockcopy" style="margin-top: 0;">
+			<h3>“Legal Way to Game the Stock Market”</h3>
+		</div>
+	</div>
+	<div class="main-middle after-split">
+		<div class="row">
+			<div class="col-content centered">
+				<p>You see, most investors dramatically underestimate the power of a stock being added to an index.</p>
+				<p>Take the Dow, for example, one of the world's oldest and most-watched indexes.</p>
+				<p>The 30 stocks that make up the Dow have only changed 54 times since the index was first created in 1896.</p>
+				<p>And whenever a stock is added to the index, the result is extremely predictable... and if you see it coming, highly profitable.</p>
+				<p>For example, on September 24, 2012, Kraft Foods was removed from the Dow...</p>
+				<p>And to replace it, UnitedHealth Group (UNH) was added...</p>
+				<img class="imgCenter" src="https://s3.amazonaws.com/assets.stansberryresearch.com/mkt/CHN/charts/CHN+charts_UNH.jpg" alt="UNH chart" />
+				<p>The result: You could have made up to a 416% GAIN, more than 5x your money, by buying UnitedHealth Group's stock before the company was added.</p>
+				<p>Meanwhile, Kraft tanked, even after their merger with Heinz...</p>
+				<img class="imgCenter" src="https://s3.amazonaws.com/assets.stansberryresearch.com/mkt/CHN/charts/CHN+charts_KHC.jpg" alt="KHC Heinz chart" />
+				<p>Or consider June 8, 2009...</p>
+				<p>Citigroup (C) and General Motors (GM) were both dropped from the Dow.</p>
+				<p>And to replace them, The Travelers Companies, Inc. (TRV) and Cisco Systems (CSCO) were added...</p>
+				<p>The result: Both soared over the next year... and turned into massive triple-digit winners.</p>
+				<img class="imgCenter" src="https://s3.amazonaws.com/assets.stansberryresearch.com/mkt/CHN/charts/CHN+charts_TRV.jpg" alt="TRV Travelers chart" /> <img class="imgCenter" src="https://s3.amazonaws.com/assets.stansberryresearch.com/mkt/CHN/charts/CHN+charts_CSCO.jpg"
+				 alt="Cisco CSCO chart" />
+				<p>Meanwhile, Citigroup went nowhere... and GM scrambled to sort out its bankruptcy.</p>
+				<img class="imgCenter" src="https://s3.amazonaws.com/assets.stansberryresearch.com/mkt/CHN/charts/chart-c.jpg" alt="Citigroup C chart" />
+				<p>It’s no wonder <em>Bloomberg  </em>calls this "The hugely profitable, wholly legal way to game the stock market."</p>
+				<p>What’s happening today is just like all the examples I’ve shown you... except on a far bigger scale.</p>
+				<p>And this story is actually much, much bigger than a few stocks being added to an index... and the gains could be even higher than usual as well.</p>
+				<p>My readers have reported some fantastic profits over the past two years...</p>
+				<p>What kind of money can you make, exactly?</p>
+				<p>Well, Charles M. just bought himself a new retirement toy – a 1,500cc motorcycle – after I shared this story with him.</p>
+				<p>And Rick, who manages a $6.4 million fund for his children, tells me he’s <strong>up by an extraordinary $1.7 million </strong>already.</p>
+				<p>Events of this magnitude are hard to come by.</p>
+				<p>And while there is no absolute certainty in the investment world and every investment carries risk... this is about as good as it gets.</p>
+				<p>Think about it...</p>
+				<p>When have you ever known, in advance, that billions of dollars would soon be forced into stocks you could buy right now... BEFORE that money was invested?</p>
+				<p>When the story first broke, I decided to hold an online event to get the word out to as many people as I could. That night I blurted out a free recommendation to everyone watching.</p>
+				<p>That stock soared up 122%, at its peak.</p>
+				<p>And it happened in large part because of this massive shift of billions of dollars.</p>
+				<p>These inclusions have just begun.</p>
+				<p>The first was on May 31 of this year, when approximately $16 billion was allocated to these stocks.</p>
+				<p>Then on August 27, it happened again, but this time, $22.7 billion was added.</p>
+				<p>And we know for certain that an additional $22.7 billion will flow into these stocks on November 27.</p>
+				<p>Some big institutions are finally taking notice. And that dollar amount could increase in 2020.</p>
+				<img class="imgCenter" src="https://s3.amazonaws.com/assets.stansberryresearch.com/mkt/CHN/billions-moving-market.png" alt="Billions Moving into Market chart" />
+				<p>I can't think of another opportunity like this in my career... and I honestly believe I'll look back in a decade and say this was the best investment opportunity I ever found, in terms of risk and reward.</p>
+				<p>The odds are so overwhelmingly stacked in your favor today that you simply must take full advantage of a situation like this when it arises.</p>
+				<p>I've only seen this type of event a handful of times in the last few years... but never, ever on a scale this large before.</p>
+				<p>Still, every time it happens on a smaller scale, the potential is huge.</p>
+				<p>One of the first times in my career that I saw anything like this was back in 2008...</p>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-fullwide blockcopy" style="margin-top: 0;">
+			<h3>Up to 305% Gains on a Single Trade</h3>
+		</div>
+	</div>
+	<div class="main-middle after-split">
+		<div class="row">
+			<div class="col-content centered">
+				<p>In November of that year, MSCI announced it was adding the entire stock markets of Lithuania and Serbia to its global index...</p>
+				<p>The big money on Wall Street had no choice but to get in... driving the entire Serbian stock market up 39% and the entire Lithuanian market up 129%.</p>
+				<p>(That'd be like the Dow soaring to 62,000. Imagine the mania...)</p>
+				<p>Overnight, millions of dollars from big banks and investors around the world started flowing into these two tiny countries.</p>
+				<p>And the individual stocks in the market went crazy... soaring 2- to 3-TIMES higher. I saw individual stock gains of 97%... 92%... 103%... and 305%.</p>
+				<img class="imgCenter" src="https://s3.amazonaws.com/assets.stansberryresearch.com/mkt/CHN/charts/chart-announcement1.jpg" alt="Lithuanian Market chart" /></div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-fullwide blockcopy" style="margin-top: 0;">
+			<h3>Turned Every $10,000 Into $97,000</h3>
+		</div>
+	</div>
+	<div class="main-middle after-split">
+		<div class="row">
+			<div class="col-content centered">
+				<p>It happened again the very next year, in 2009.</p>
+				<p>MSCI told its hundreds of big-name clients that they were adding the Pakistani stock market to their index.</p>
+				<p>The flood of institutional money into Pakistan drove their entire stock market up nearly 400%.</p>
+				<img class="imgCenter" src="https://s3.amazonaws.com/assets.stansberryresearch.com/mkt/CHN/charts/chart-announcement2.jpg" alt="Announcement Chart 2" />
+				<p>And some individual stocks went up as much as 871%...</p>
+				<img class="imgCenter" src="https://s3.amazonaws.com/assets.stansberryresearch.com/mkt/CHN/charts/chart-announcement3.jpg" alt="871% return announcement" />
+				<p>That's enough to turn every $10,000 into $97,000 on a single trade.</p>
+				<p>These kinds of gains are almost impossible to achieve if you stick to the ordinary investment strategies most people are familiar with.</p>
+				<p>But please keep in mind: You don't have to move any of your money outside of the United States to take advantage of the opportunity I've been telling you about.</p>
+				<p>So if you're thinking... "I'd never put a PENNY in Pakistan, Steve!"</p>
+				<p>You don't have to. I probably wouldn't either...</p>
+				<p>In fact, if you really want to know where I recommend you send your money to take advantage of this trend... it'd be right here in this downtown Manhattan skyscraper near Bryant Park.</p>
+				<img class="imgCenter" src="https://s3.amazonaws.com/assets.stansberryresearch.com/mkt/CHN/Bryant-Park-building.png" alt="Bryant Part Skyscraper" style="width: 50%;" />
+				<p>That’s because there's actually a very simple and unique way of playing these massive index changes through any ordinary U.S. brokerage account.</p>
+				<p>Reader Jim H. just did and told me,</p>
+				<p class="testimonial"><em>"Dr. Steve, I am happy to report that I am up $25,000 on my $63,000 investment. All positions are up between 19% and 91.5% and held in IRA accounts. My wife and I are in our 70s and sure are appreciating these additions to our nest egg."</em></p>
+				<p>And it's all possible because a defect in the system has finally been addressed.</p>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-fullwide blockcopy" style="margin-top: 0;">
+			<h3>Biggest MSCI Announcement Ever</h3>
+		</div>
+	</div>
+	<div class="main-middle after-split">
+		<div class="row">
+			<div class="col-content centered">
+				<p>In 2015 MSCI identified a major flaw in its index system.</p>
+				<p>You see, there are about 60 stock exchanges in the world.</p>
+				<p>Of these sixty... 16 belong to something called "The Trillion Dollar Club." These are the biggest, most powerful stock markets in the world.</p>
+				<p>For example, the United States... London... Germany... Switzerland... and China.</p>
+				<img class="imgCenter" src="https://s3.amazonaws.com/assets.stansberryresearch.com/mkt/CHN/image-exchanges.jpg" alt="Trillion Dollar Club" />
+				<p><em>The MSCI Indexes had represented all 16 of these trillion-dollar markets.</em></p>
+				<p><strong><em>Except for one.</em></strong></p>
+				<p>That's because this market had been essentially off-limits for you and me since 1988.</p>
+				<p>To get anywhere near it, you had to manage at least $500 million and pass a rigorous qualification process.</p>
+				<p>Some of the richest and most powerful names on Wall Street could trade in and out of this market... and they did, for decades.</p>
+				<p class="indent">I'm talking about groups like the Ford Foundation... Princeton University... Bill &amp; Melinda Gates... the Harvard and Yale pension funds... Merrill Lynch... Goldman Sachs... and the Abu Dhabi Investment Authority...</p>
+				<p>And why were these folks so interested?</p>
+				<p>Because this is one of the few markets I know of where you can see life-changing gains in as little as 12 months.</p>
+				<p>And it's probably the only place in the world where an investment of just $500... $1,000... or as much as $5,000 can balloon into what some people make in an entire year.</p>
+				<p>I've watched certain stocks run as high as 554%... 327% even 1,187%... in just a few years.</p>
+				<p>But remember, accessing these gains used to be almost <u>entirely off-limits</u> to regular folks like you and me.</p>
+				<p><strong>But recently that has all changed.</strong></p>
+				<p>MSCI themselves finally admitted that this market is "too big to ignore"... <u>and that the market must be added to MSCI's index</u>.</p>
+				<p>Now, billions of U.S. dollars are flooding a market that's been essentially off limits for 30 years.</p>
+				<p>As you might have guessed, I'm talking about the local Chinese market... also known as the "A-Share" market.</p>
+				<p>But let me repeat once more, you don't have to put your money anywhere inside of China to take advantage of this opportunity.</p>
+				<p>And anything you’ve heard about the trade war or tensions with China cannot impact what’s scheduled for November 27.</p>
+				<p>No matter what’s going on in the news cycle, the reality is that China is the world's second-largest economy. In fact, some say China's economy has already passed America's.</p>
+				<p>Jim Rogers is one of the most successful money managers in history. From 1970 to 1980, he ran the Quantum Fund which returned an amazing 4,200%, while the S&amp;P 500 only rose 47%.</p>
+				<p>Rogers recently raised some eyebrows when he said:</p>
+				<p class="testimonial"><em>"I moved to Asia in 2007 because I wanted my children to grow up knowing Asia, and speaking Mandarin since, in their lifetime, Asia is going to be the most important market in the world."</em></p>
+				<p>It's a remarkable statement.</p>
+				<p>Currently, China's stock market is the second largest in the world, behind only the U.S.</p>
+				<p>How can you have a complete, legitimate global index if you leave out the world's second largest stock market?</p>
+				<p>Countries like Malaysia and Korea are already included in this MSCI Index – but China still hasn't fully been added?!</p>
+				<p>That's because for decades, the Chinese government refused to accept most foreign investors. The only folks they did allow were investors who had SO much money (like Bill Gates) that they couldn't ignore them.</p>
+				<p>China has been like a luxury investment available only to the rich for decades.</p>
+				<p>But MSCI has decided to right that wrong.</p>
+				<p>China has worked tirelessly to modernize and regulate its markets...</p>
+				<p>China has worked hand-in-hand with MSCI for years to prepare for this massive new influx of cash.</p>
+				<p>And after years of waiting, hundreds of billions of U.S. dollars started to flood the Chinese local market for the first time in history.</p>
+				<p>It was a tidal wave of money.</p>
+				<p>But it's only the beginning...</p>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-fullwide blockcopy" style="margin-top: 0;">
+			<h3>We're Just Getting Started...</h3>
+		</div>
+	</div>
+	<div class="main-middle after-split">
+		<div class="row">
+			<div class="col-content centered">
+				<p>The best way to explain what's happening is to look at these pie charts.</p>
+				<p>On the left, you'll see the original allocations in the MSCI Emerging Markets fund.</p>
+				<p>The middle pie chart represents the first successful inclusion of A-Shares, which happened in May of 2018.</p>
+				<img class="imgCenter" src="https://s3.amazonaws.com/assets.stansberryresearch.com/mkt/CHN/charts/CHN+charts_MSCI+Emerging+Markets.jpg" alt="MSCI Emerging Markets Breakdown" />
+				<p>And in the final chart, the red slice is how much of the pie MSCI ultimately wants to devote to China A-Shares. It's a huge portion. Chinese stocks will eventually be the biggest player in the Emerging Markets Index.</p>
+				<p>MSCI didn't want to shock the markets with a massive one-day move... so they've been gradually moving more and more money into Chinese A-Shares.</p>
+				<p>In other words, <u>we've only just seen the very first influx of cash</u>.</p>
+				<p>As China draws an ever-greater slice of pie... more and more money will be legally required to flow into the stocks I've found... <em>hundreds of</em> <em>billions of dollars more</em>.</p>
+				<p>But, amazingly, the story doesn’t end there.</p>
+				<p>In fact, it just got even bigger…</p>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-fullwide blockcopy" style="margin-top: 0;">
+			<h3>New Players in the China Story</h3>
+		</div>
+	</div>
+	<div class="main-middle after-split">
+		<div class="row">
+			<div class="col-content centered">
+				<p>I'm as bullish on China as anyone, but even my most optimistic predictions couldn't account for this.</p>
+				<p>While MSCI is one of the largest index makers in the world… there are still other power players in the space.</p>
+				<p>One of MSCI's main competitors is the FTSE Group… known for its famous Russell indexes.</p>
+				<p>It’s a British provider of stock market indexes that serves approximately 350 institutions globally, including investment management firms, central banks, insurance companies, pension funds, and hedge funds.</p>
+				<p>Essentially, a big British counterpart to the MSCI.</p>
+				<p>On June 20, 2019 a blog post was uploaded to their website. It contained a bit of technical jargon, but I was stunned by the highlighted section below...</p>
+				<p class="testimonial"><em>"As with all our country classification changes, we made this announcement well in advance of implementation to give market participants time to adjust. <mark><strong>We are about to begin including China A Shares securities into FTSE GEIS from June 24, 2019</strong></mark>."</em></p>
+				<p>Much like MSCI, the FTSE Russell has decided that the China A-Shares market is too big to ignore any longer.</p>
+				<p>And it plans to fix that.</p>
+				<p>By March of 2020, it plans to allocate 5.6% of its total FTSE Emerging Index to China A-Shares, <strong>representing AN ADDITIONAL $10 billion more that will flow into the Chinese market</strong>.</p>
+				<img class="imgCenter" src="https://s3.amazonaws.com/assets.stansberryresearch.com/mkt/CHN/charts/CHN+charts_The+Growth+of+China.jpg" alt="Growth of China breakdown" />
+				<p>And this is just the beginning... Look at how much they plan to add in the future!</p>
+				<p>The A-Shares market will become the largest piece of the Emerging Markets pie.</p>
+				<p>When I heard about this in June, I couldn't believe it.</p>
+				<p>And then, just last month... it got even better.</p>
+				<img class="imgCenter" src="https://s3.amazonaws.com/assets.stansberryresearch.com/mkt/CHN/article-China-Share-A.png" alt="Are you ready for China A-Shares?" />
+				<p>The S&amp;P Dow Jones Indices announced they are joining MSCI and FTSE Russell by expanding into Chinese A-Shares.</p>
+				<p>S&amp;P plans to mirror MSCI and FTSE Russell, scheduling inclusions over time so as not to shock the market.</p>
+				<p>Today, onshore China makes up 0% of the S&amp;P Emerging BMI.</p>
+				<p>At full inclusion, the plans are to increase this percent to 19%.</p>
+				<img class="imgCenter" src="https://s3.amazonaws.com/assets.stansberryresearch.com/mkt/CHN/charts/CHN+charts_S%26P+Emerging+BMI.jpg" alt="S&amp;P Emerging BMI" />
+				<p>Based on the $1 trillion in total assets tracking the S&amp;P Global indices, conservative estimates show billions more will flow into Chinese A-Shares.</p>
+				<p>Fang Xinghai, vice chairman of the China Securities Regulatory Commission, predicted earlier this year that the foreign capital inflows to Chinese stocks will reach about $89.76 billion in 2019 alone.</p>
+				<p>And top fund managers estimate that <strong>$400 billion will flow into China A-Shares stocks over the next 10 years.</strong></p>
+				<p>When I first started covering this story, it was just MSCI that was spearheading this change.</p>
+				<p>Now the three most powerful groups in finance have come together.</p>
+				<p>They represent pretty much EVERY bank, money manager, and hedge fund in the world.</p>
+				<p>A tsunami of cash is flowing into Chinese A-Shares.</p>
+				<p>And even the most powerful man on the planet can't slow it down.</p>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-fullwide blockcopy" style="margin-top: 0;">
+			<h3>The Big Picture</h3>
+		</div>
+	</div>
+	<div class="main-middle after-split">
+		<div class="row">
+			<div class="col-content centered">
+				<p>Let's address the elephant in the room. The trade war.</p>
+				<p>I don't know how the current trade war will play out. Honestly, I don't think anyone does.</p>
+				<p>If nothing else, it will likely end when Trump leaves office... whether that's next year... or in 2024.</p>
+				<p>But it’s important to note that what I’m predicting has nothing to do with politics, trade, or manufacturing.</p>
+				<p>This is about the fundamental infrastructure of how the stock markets are set up.</p>
+				<p>Trump can't stop this. A "trade war" can't stop this.</p>
+				<p><strong>It's inevitable. It's guaranteed. And it's happening now...</strong></p>
+				<p>You need to learn how to position yourself for it.</p>
+				<p>I know the playbook for exactly how this is going to play out over the next couple of years... and which stocks will receive the lion's share of the money... and when.</p>
+				<p class="indent">Even better... in my research, I have learned the name of an investment that has outperformed the S&amp;P 500 by more than 135 percentage points over the past 10 years. It has a staggering 17% annualized return over that 10-year span.</p>
+				<p class="indent">$100,000 invested in something that gets 17.6% annualized returns turns into more than $505,900 in 10 years. That's the kind of investment you want powering your retirement.</p>
+				<p>You want to get your money here as soon as possible – definitely before November 27.</p>
+				<p>As I've said, this is part of a larger story that's been unfolding over the past few years.</p>
+				<p>Along the way, I've already found lots of opportunities to profit as China's market opens up to outside investors...</p>
+				<p>Bob L., for example, told me he's already cashed out gains of $263,000 on this idea... with another $146,000 in gains still in the market. His starting account was somewhere around $2.5 million. He writes:</p>
+				<p class="testimonial"><em>"Essentially just from trading your China stocks I am able to cover all costs for sending both my daughters away to college for four years."</em></p>
+				<p>Mark L. said:</p>
+				<p class="testimonial"><em>"I made relatively cautious purchases with part of my 401k yet this was sufficient to propel my entire portfolio up nearly $80,000 in eighteen months."</em></p>
+				<p>The time to take advantage of this idea is right now, because every day you wait to get in... you are missing out on the type of investments that only the rich and powerful have access to.</p>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-fullwide blockcopy" style="margin-top: 0;">
+			<h3>Off Limits for 30 Years... Now Possible Again</h3>
+		</div>
+	</div>
+	<div class="main-middle after-split">
+		<div class="row">
+			<div class="col-content centered">
+				<p>The Chinese stock market entering one of the largest indexes in the world, for the first time ever, was a landmark financial event.</p>
+				<p>Sure, adding the Pakistani market or the Lithuanian market was a big deal.</p>
+				<p>But this is China we're talking about. You're NEVER going to see a market that's larger than China being added to an index.</p>
+				<p>So why isn't this all over the news? Why don't you have a dozen calls or e-mails from your financial advisor telling you to get into this opportunity?</p>
+				<p>Well, one reason is because all the specific details surrounding the inclusion are buried in Appendix 17 of MSCI's 170-page document about this event...</p>
+				<p>Do you really think an entry level researcher in the mainstream financial press is digging that deep?</p>
+				<p>Maybe the few articles that have been written didn't get enough clicks.</p>
+				<p>But I suspect it goes deeper than that.</p>
+				<p>The reality is, if every bank on Wall Street and 97 out of 100 money managers needed to buy these stocks on November 27, no matter what price they're trading at, do you think they would want the whole investment community to know that beforehand?</p>
+				<p>That's why I can tell you right now: Ignoring this opportunity will be one of the biggest financial mistakes of your life.</p>
+				<p>That's because China is one of the few places left in the world where fast, triple-digit upside is even possible for the broad market.</p>
+				<p>Now, I won't sugarcoat that Chinese stocks have dropped more than 10% from their recent highs.</p>
+				<p>The financial markets and media are reacting to the trade war and the tariffs...</p>
+				<p>But if you ask me, that's a temporary policy.</p>
+				<p>Investors were looking for a reason to sell stocks, and the tariffs made the perfect excuse.</p>
+				<p><strong>But I see a tremendous buying opportunity.</strong></p>
+				<p>If you missed out on any of the gains made in China so far, you've been given a rare second chance.</p>
+				<p>Bull markets in China are unlike anywhere else in the world. After all, three times in the last 12 years their entire market has gone up triple digits.</p>
+				<p>Take a look...</p>
+				<img class="imgCenter" src="https://s3.amazonaws.com/assets.stansberryresearch.com/mkt/CHN/charts/chart-shanghai.jpg" alt="Shanghai Stock Composite" />
+				<p>It took the entire U.S. market over seven years to double, but in China it can happen in just a few months.</p>
+				<p>And when an entire market doubles, its underlying stocks soar.</p>
+				<p>Here are just some of the "A-Share" gains that happened during the last China bull market...</p>
+				<p>Remember, these are the stocks that have been essentially off-limits to most of us for the past 30 years.</p>
+				<img class="imgCenter" src="https://s3.amazonaws.com/assets.stansberryresearch.com/mkt/CHN/image-companies.jpg" alt="large gains table" />
+				<p>And again, most of these extraordinary gains took place in just two years or less.</p>
+				<p>Years later, we'll all look back on this as a "sure thing" that was obviously going to soar. With all the money pouring in, how could it not?</p>
+				<p>So this is your wake up call.</p>
+				<p>You need to see how to get into these stocks I've found. Now.</p>
+				<p>And don't just take my word for it. It's already paying off for people who dipped their toes into this story when I first shared it in 2015...</p>
+				<p>What's stopping you?</p>
+				<p>I first revealed the MSCI China story on May 15, 2015.</p>
+				<img class="imgCenter" src="https://s3.amazonaws.com/assets.stansberryresearch.com/mkt/CHN/article-200-billion-flow.jpg" alt="200 Billion flow article" />
+				<p>Many folks were hesitant to act. They heard the word "China" and immediately brushed me off...</p>
+				<p>Others, like Pam M., saw the same potential I did. She said,</p>
+				<p class="testimonial"><em>"I normally would not have touched this investment with a 10-ft pole... but I'm up $103,020.00 in a little over a year and another $34,561 since June 2017."</em></p>
+				<p>Then, in November of 2015, I wrote about this idea and encouraged folks to start getting their money in. Here's what I said...</p>
+				<img class="imgCenter" src="https://s3.amazonaws.com/assets.stansberryresearch.com/mkt/CHN/article-china-world-power.jpg" alt="China World Power article" />
+				<p>Again, I was met with skepticism. But fortunately, some more readers listened...</p>
+				<p>Bob M. told me he's already added $150,000 to his $375,000 account. He said,</p>
+				<p class="testimonial"><em>"My wife didn't laugh about China after seeing our nest egg grow... but I have several mocking friends eating crow now."</em></p>
+				<div class="sidebar"><img class="sidebar-image" src="https://s3.amazonaws.com/assets.stansberryresearch.com/mkt/CHN/image-steve_china.jpg" alt="Steve China visit" />
+					<p>I wanted to learn more about this story in-person, so in June 2016, I decided to visit China with my research team.</p>
+				</div>
+				<p>In June 2016 I visited China with a large research team.</p>
+				<p>I wanted to learn more about this story in-person, so I met with Chinese government officials, senior investment bankers and brokers... and I even said a few words at the Shanghai Stock Exchange.</p>
+				<p>I came back from my trip more excited than ever about this opportunity... and did everything I could to get the word out.</p>
+				<p>On September 15, 2016, I hosted a free online event for every Stansberry Research reader...</p>
+				<p>If you followed us back then, you would have received an invite.</p>
+				<p>During the event, I explained everything you needed to know about this MSCI announcement... And I even gave away a free recommendation: the name and ticker of my No. 1 favorite Chinese company.</p>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-fullwide blockcopy" style="margin-top: 0;">
+			<h3>If you purchased the stock I revealed that night,<br />you'd already have seen gains as high as 122%.</h3>
+		</div>
+	</div>
+	<div class="main-middle after-split">
+		<div class="row">
+			<div class="col-content centered">
+				<p>In fact, this trade recommendation was so profitable – I’ve received notes from people across the country who took advantage of it... and are thrilled by the results. </p>
+				<p>Take a look... and keep in mind that some readers may have been working with large portfolios...</p>
+				<ul class="hideDots">
+					<li>Kyle K. <strong>$68,000</strong></li>
+					<li>Tony B. <strong>$9,600</strong></li>
+					<li>Morgan E. <strong>$21,000</strong></li>
+					<li>Chris L. <strong>$12,500</strong></li>
+					<li>Kyle B. <strong>$8,062</strong></li>
+					<li>Bill K. <strong>$13,000</strong></li>
+					<li>Chris C. <strong>$50,000</strong></li>
+					<li>George W. <strong>$13,550</strong></li>
+					<li>Mike B. <strong>$7,927</strong></li>
+					<li>James H. <strong>$48,729</strong></li>
+					<li>Tom B. <strong>$24,000</strong></li>
+					<li>Scott P. <strong>$25,000</strong></li>
+					<li>Greg K. <strong>$16,627</strong></li>
+					<li>Mike M. <strong>$9,077</strong></li>
+					<li>Ed A. <strong>$23,000</strong></li>
+					<li>Gary P. <strong>$16,227</strong></li>
+					<li>Jim R. <strong>$25,000</strong></li>
+					<li>David P. <strong>$10,798</strong></li>
+					<li>David C. <strong>$79,600</strong></li>
+					<li>Jim K. <strong>$4,000</strong></li>
+					<li>Richard G. <strong>$12,485</strong></li>
+				</ul>
+				<p>In fact, I sent out a note checking in with anyone who’s been following my China research. I received over 600 replies.</p>
+				<p>The feedback has been incredible.</p>
+				<p>I heard from a man named John T. who took some of his proceeds from my China research and visited his grandfather, a highly decorated World War II veteran living in Arizona he hadn’t been able to visit in years.</p>
+				<p>There was another note from Ray C. who was going through some tough times before finding my China research. He said,</p>
+				<p class="testimonial"><em>"A year ago, I had to put my wife into assisted living in the greater San Francisco bay area. That is not cheap and I'm now 82 years young. In a little over 2 years our portfolios have gone from $800,000 to $1,300,000."</em></p>
+				<p>Stories like this make me glad I walked away from Wall Street so many years ago to help real people...</p>
+				<p>And get this...</p>
+				<p>A while back, I went to the Masters Tournament in Augusta, Georgia for the first time ever... and two guys came up to me, out of the blue and said, "Thanks Steve, for helping me make so much money in China."</p>
+				<p>I've written a <em>DailyWealth</em> article about how bullish I am on China every two weeks or so for the last few years... over 100 articles.</p>
+				<p>So when I say this is "the best investing opportunity I've ever seen in my life," I mean it.</p>
+				<p>And the fact is, now is your best chance.</p>
+				<p>Because there has been some unwarranted fear in the markets recently.</p>
+				<p><strong>And this gives us a great buying opportunity today.</strong></p>
+				<p>Money has already started to move... so if you’re going to act on this, you must get the stocks named by MSCI into your brokerage accounts as quickly as you can.</p>
+				<p>Every day you waste, your potential gains dwindle.</p>
+				<p>If you're interested, here are the two steps I recommend you take right now.</p>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-fullwide blockcopy" style="margin-top: 0;">
+			<h3>Step No. 1: Get the Playbook</h3>
+		</div>
+	</div>
+	<div class="main-middle after-split">
+		<div class="row">
+			<div class="col-content centered">
+				<p>As I promised, you don't need to move a penny outside of the U.S. to take advantage of this opportunity.</p>
+				<p>There's a ticker listed on the New York Stock Exchange that positions you to take advantage of this entire opportunity in full.</p>
+				<p>My research team and I toured the Manhattan headquarters of this company and met with all the members of the executive team. I even traveled across China with one of the CIOs.</p>
+				<p>In my opinion, no one has a better idea of what's going on in the Chinese markets and exactly how to play it, than this small company.</p>
+				<p>They'll go down as the ones who saw it coming... and so can you.</p>
+				<p>When hundreds of billions of dollars flow into China, this is the safest and easiest way to double – potentially even triple – your money in the coming years.</p>
+				<p>Frankly, I don't want to waste any more of your time if you want to act on this opportunity.</p>
+				<img class="sidebar-image" src="https://s3.amazonaws.com/assets.stansberryresearch.com/mkt/CHN/The+Great+China+Trade+MAG3+Render.png" alt="The Great China Trade book" style="width: 40%;" />
+				<p>That's why I've just finished writing a research report that will give you a quick overview of what this landmark event means for the markets, and how you can get your money into the right stocks, immediately. </p>
+				<p>It's called: <strong><em>The Great China Trade: How to Make Triple-Digit Gains on the Greatest Index Inclusion in History</em></strong>.</p>
+				<p>I've updated the report based on recent events... including a new opportunity, one that’s led to 17% annualized gains over the last decade.</p>
+				<p>If you're interested, I can give you access to my report in the next few minutes... so you can get started right away.</p>
+				<p>I’ll tell you how and when to buy this investment in a U.S. brokerage account... and lay out everything you need to know about the MSCI decision... along with a few additional opportunities I'll explain in full detail.</p>
+				<p>I'll tell you what to say to your broker right now, what price to pay for the investments I'm recommending (buy up to prices), and how much money you should expect to make.</p>
+				<p>Don’t worry: My report won’t take you more than 15 minutes to read. After that, you’ll have everything you need to take advantage of this opportunity right away.</p>
+				<p>You won’t find anything else like this report, anywhere, at any price.</p>
+				<p>But before you get in, there’s one more thing you should know...</p>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-fullwide blockcopy" style="margin-top: 0;">
+			<h3>Step 2: An Extra 100-plus% Gain on This Story</h3>
+		</div>
+	</div>
+	<div class="main-middle after-split">
+		<div class="row">
+			<div class="col-content centered">
+				<p>I’m probably the only analyst in America covering the MSCI story in such detail and helping regular folks get in.</p>
+				<p class="indent">For example, Willie N. convinced his mother-in-law to dip her toe into my thesis. He said, <em>“She's happy and I am now a hero! Thanks for putting me a notch higher in my mother-in-law's eyes!”</em></p>
+				<p class="indent">And after turning $60,000 into $100,000 on a single stock play, Brian L. told me, <em>“I want to personally thank you for helping me become a better investor and trader.”</em></p>
+				<p>But for me, it wasn’t enough to simply write about this story.</p>
+				<p>I wanted to create the ultimate China model portfolio and give you dozens of different ways to play this once-in-a-lifetime opportunity.</p>
+				<p>And to help me, I added a new member to my research team, Asia-based analyst Brian Tycangco.</p>
+				<p>Brian has worked as a stockbroker at a large Asian trading house and as an equities analyst for a major European investment bank. He's met with the leading CEOs in every industry in Asia.</p>
+				<p>He's my eyes on the ground in the area, and he's been a massive help to me in my research.</p>
+				<p>More importantly, he truly knows the ins and outs of making money in the region. I was instantly impressed upon meeting him and it wasn't long before I offered him a job.</p>
+				<p>This special situation in China is by far the best I’ve seen in my career…</p>
+				<p>Unfortunately, most people are going to miss out...</p>
+				<p>If history has taught me anything, it’s that most people will foolishly wait until this story is all over the news before they act on it.</p>
+				<p>The media won't report on this until it's a massive story, when the market has already soared hundreds of percent.</p>
+				<p>But if you're still waiting by then, you'll be way too late.</p>
+				<p><strong>I don’t want that to happen to you.</strong></p>
+				<p>I’ve done everything in my power to get this story into your hands so you could join folks like Bruce H. who are making a fortune with my work. He said,</p>
+				<p class="testimonial"><em>“I am a retired medical doctor and have invested $50,000 and probably made $25,000 in total. The money helps me to continue my retirement in Manhattan.”</em></p>
+				<p>I’m still puzzled why people would want to ignore this China story until now.</p>
+				<p>But since we’re about the see the next huge wave of cash flood into China on November 27, I'm willing to let you join <em>True Wealth Opportunities: China</em> for an incredible discount right now.</p>
+				<p>Having said that, there are two things you should keep in mind...</p>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-fullwide blockcopy" style="margin-top: 0;">
+			<h3>What to Do Next</h3>
+		</div>
+	</div>
+	<div class="main-middle after-split">
+		<div class="row">
+			<div class="col-content centered">
+				<p>First, as soon as you join <em>True Wealth Opportunities: China</em>, I'll rush you the names and tickers symbols of the stocks I've been researching.</p>
+				<p>I believe each of these stocks has the potential to return triple-digits in the next 18 months.</p>
+				<p>But remember, for the chance to see the biggest gains, you absolutely must get your money into these stocks before November 27. You'll find the full details of these stocks in my special report, <strong><em>The Great China Trade: How to Make Triple-Digit Gains on the Greatest Index Inclusion in History</em></strong>.</p>
+				<p>I suggest you act on these recommendations as soon as you can.</p>
+				<p>Second, there are more than 20 other opportunities I cover in my monthly publication that you can act on as well. Each has the potential for 50% to 100% gains over the coming months.</p>
+				<p>For example, retired lawyer David W. bought every single one of my recommendations and already, he says:</p>
+				<p class="testimonial"><em>"Every recommendation is up, so how could I not be pleased with the result? In fact, the word "pleased" is an extreme understatement. If all goes well I will probably buy a new car within the next year. Also, I am happy to be able to help with grandchildren tuitions."</em></p>
+				<img class="sidebar-image" src="https://s3.amazonaws.com/assets.stansberryresearch.com/mkt/CHN/How+to+Quickly+and+Easily+Get+the+Best+Deal+on+Chinese+Stocks-v2.png" alt="The Best Deal on Chinese Stocks" style="width: 40%;" />
+				<p>And if you want the chance to "juice" your gains even higher, I'll give you a series of recommendations that allow you to set up your account to invest directly in Hong Kong-listed stocks.</p>
+				<p>I've created a simple report to show you exactly how.</p>
+				<p>It's called: <strong><em>How to Quickly and Easily Get the Best Deal on Chinese Stocks</em></strong>.</p>
+				<p>I'd estimate that more than 1,000 people have read this report. So far, I haven't seen anyone report any major issues getting into my recommendations.</p>
+				<p>But by now, I'm sure you're wondering how much it costs to join my research service.</p>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-fullwide blockcopy" style="margin-top: 0;">
+			<h3>Why This May Not be Right for You</h3>
+		</div>
+	</div>
+	<div class="main-middle after-split">
+		<div class="row">
+			<div class="col-content centered">
+				<p>Well... it's not cheap.</p>
+				<p>As you may know, we charge as much as $5,000 a year for access to these kinds of "special situation" ideas.</p>
+				<p>And frankly, it's a bargain at that rate.</p>
+				<p>Just consider: If you had the potential to make tens of thousands of dollars like my reader Ray F. says he's done, you shouldn't mind paying $5,000 or more for the information showing you how. Ray says he's already added $100,000 to his $500,000 account
+					with my work.</p>
+				<p>Plus, one full year of our <em>True Wealth Opportunities: China</em> is already discounted on our website to $3,000.</p>
+				<p>As far as I'm concerned, we're practically giving it away at that price.</p>
+				<p>So if that sounds like too much money, I'm sorry. This probably isn't suited for you.</p>
+				<p>Still, since November 27 is right around the corner, I'm willing to make you a special offer right now.</p>
+				<p class="indent"><strong>You can receive one full year of <em>True Wealth Opportunities: China</em>, including access to the two special reports I've mentioned, plus my entire model portfolio of recommendations, for just $1,500 today...</strong></p>
+				<p class="indent"><strong>That's 50% off the normal price.</strong></p>
+				<p>Just remember: This offer is only good for a limited time.</p>
+				<p>So if you're interested, I urge you to get in now...</p>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-fullwide blockcopy" style="margin-top: 0;">
+			<h3>What You'll Receive</h3>
+		</div>
+	</div>
+	<div class="main-middle after-split">
+		<div class="row">
+			<div class="col-content centered">
+				<p>As a new member of <em>True Wealth Opportunities: China</em>, you'll receive the two reports I've mentioned today... access to our full model portfolio of 20-plus recommendations... plus monthly updates on the entire model portfolio each month, for
+					the next year.</p>
+				<p>But please note, the only reason I'm able to offer you <strong>50% off the normal price</strong> today is because we will not be issuing any refunds on this offer.</p>
+				<p>It's sad, but true, that a number of people will take advantage of our goodwill... sign up just to receive our stock recommendations... then immediately cancel and ask for their money back.</p>
+				<p>You have to understand how dangerous that is for me and our company.</p>
+				<p>We built this business to sell research, not give it away.</p>
+				<p>I've already done everything I can to show you the potential here,</p>
+				<p>Some of my readers are already using the gains they made with my research in just under two years to buy houses and cars, to take vacations and care for their family.</p>
+				<p>For example, reader Troy J. writes:</p>
+				<p class="testimonial"><em>"When Steve Sjuggerud introduced his China Opportunities, I read and studied every word. I have invested into 5 or 6 of the China recommendations and am up in all positions and up over $50,000."</em></p>
+				<p>But now, it’s your decision.</p>
+				<p>I think you'll find that the value you'll get from my China research will far outweigh the cost.</p>
+				<p>And I think I've spelled out clearly exactly what you'll receive, so there shouldn't be any surprises.</p>
+				<p class="indent"><strong>Bottom line: This is one of the best opportunities I've seen in my career for you to potentially double your money in the next 18 months... and your days are numbered to have the chance to make the most money with this opportunity.</strong></p>
+				<p>After that you'll be too late.</p>
+				<p>To get started, simply click the button below.<br /><br /></p>
+				<div class="center-div">
+					<div class="orderNowBox"><a class="btn btn-danger countdown-button next orderNow store-next-page" href="https://acatin123.github.io/example.portfolio/past-work/SB-funnel/OF_example.html" id="storeNextLink" target="_top">GET STARTED</a></div>
+				</div>
+				<div id="signoff">
+					<p>Regards,<br /> <img alt="Signature" src="https://secure-prod-assets.s3.amazonaws.com/signatures/SteveSjuggerud.png" style="max-width: 300px;" /><br /> Steve Sjuggerud<br /> November 2019</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--Disclosures-->
+	<div class="disclosures-background">
+		<div class="disclosures">Legal Notices: Here is our <a href="https://stansberryresearch.com/disclosures" target="_blank" rel="noopener noreferrer">Disclosures and Details</a> page. DISCLOSURES ABOUT OUR BUSINESS contains critical information that will help you use our work
+			appropriately and give you a far better understanding of how our business works - both the benefits it might offer you and the inevitable limitations of our products. Although this is not a part of our "Disclosures and Details" page, you can view our
+			company's privacy policy <a href="http://stansberryresearch.com/privacy-policy/" target="_blank" rel="noopener noreferrer">here</a>.</div>
+	</div>
+	<!--End Disclosures-->
+</article>
+<footer>
+	<div class="bottom-footer">
+		<p>© 2019 Stansberry Research</p>
+	</div>
+</footer>
+</body>
+</html>

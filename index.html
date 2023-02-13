@@ -17,15 +17,21 @@
 			display:block;
 			width:100%;
 			padding: 20px auto;
-			background-color:#74C365;
+			background-color:#38761d;
 			border-top: solid 1px #539d45;
 		}
 		.header{
 			width:100%;
 			display:block;
-			background-color:#74C365;
+			background-color:#38761d;
+			/* background-color:#74C365; */
 			border-bottom: solid 1px #539d45;
 		}	
+		.header h1{
+			color: #FFF;
+			text-align: center;
+			padding: 10px 0;
+		}
 		.myContainer{
 			display:block;
 			margin:10px auto;
@@ -37,7 +43,7 @@
 			max-width:40vw;
 			margin: 0 auto;
 		}
-		.footContainer{
+		.ftContainer{
 			display:block;
 			margin:0 auto;
 			width: 80%;
@@ -104,7 +110,7 @@
 			font-size:18px;
 			text-align:center;
 			color:#000;
-			font-weight:600;
+			margin-bottom:10px;
 		}
 		.careerBox h3{
 			font-size:25px;
@@ -115,9 +121,81 @@
 			font-size:20px;
 			text-align:center;
 			color:#0b5394;
+			font-weight:600;
 		}
 		.iconBig{font-size:50px !important;}
-		.footIcon{
+		.workExample{
+			height: 200px;
+			max-width: 300px;
+			border-radius: 30px;
+			margin:0 auto;
+			padding-left:5px;
+			padding-right:5px;
+		}
+		.stansberryLogo{
+			background-image:url(https://stansberryresearch.com/assets/img/publication-icon/publication-icon_theme_sr-team.svg);
+			background-repeat: no-repeat;
+			background-size: 50%;
+			background-position: center;
+			background-color: #f9f9f9;
+			border: solid 1px #e6e6e6;
+		}
+		.stbFont{
+			position: relative;
+			top: 4rem;
+			margin: 0;
+			padding: 0;
+			text-align: center;
+			font-size: 1.7rem;
+			font-weight: 700;
+			color: #000;
+			/* -webkit-text-stroke-width: 1px;
+			-webkit-text-stroke-color: #000; */
+		}
+		.mattMcCall{
+			background-image:url(./past-work/10xMicro/img/hero-bg-ebook.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			background-color: #f9f9f9;
+			border: solid 1px #e6e6e6;
+		}
+		.mcFont{
+			position: relative;
+			top: 4rem;
+			margin: 0;
+			padding: 0;
+			text-align: center;
+			font-size: 1.7rem;
+			font-weight: 700;
+			color: #FFF;
+			-webkit-text-stroke-width: 1px;
+			-webkit-text-stroke-color: #000;
+		}
+		.gUmi{
+			background-image:url(https://img.itch.zone/aW1hZ2UvMjIzOTk1LzEwNTc3NDQucG5n/original/hcmbV6.png);
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			background-color: #f9f9f9;
+			border: solid 1px #e6e6e6;
+		}
+		.gUmiFont{
+			position: relative;
+			top: 4rem;
+			margin: 0;
+			padding: 0;
+			text-align: center;
+			font-size: 1.7rem;
+			font-weight: 700;
+			color: #FFF;
+			-webkit-text-stroke-width: 1px;
+			-webkit-text-stroke-color: #000;
+		}
+		.past-work-box{
+			margin-bottom:40px;
+		}
+		.ftIcon{
 			font-size: 45px;
 			border: solid 1px #c3c3c3;
 			border-radius: 20px;
@@ -129,7 +207,28 @@
 			position:relative;
 			top:-35px;
 		}
-		.gray{color: #bcbcbc !important;}
+		.ftContainer p{
+			text-align:center;
+			padding-bottom:10px;
+			color:#FFF;
+			font-size:12px;
+		}
+		.contactInfo{
+			margin-bottom:20px;
+			text-align:center;
+			padding-bottom:30px;
+		}
+		.goodbyeText{
+			margin-bottom: 0;
+			padding-bottom: 5px;
+			font-weight: 600;
+			text-align:center;
+		}
+		.bigCenter{
+			margin:0 auto;
+			width:75%;
+		}
+		.gray{color: #8a8a8a !important;}
 		.blue{color:#0b5394 !important;}
 		.centerMe{
 			display:block;
@@ -142,21 +241,24 @@
 <body>
 <!-- Begin body -->
 <div class="header">
+
+	
+
+	<!-- Old Header for adding links in future.
 	<div class="row">
 		<div class="col-sm-2" id="homeLogo">
 		<i class="fa-solid fa-house homeLogo"></i>
-		<!-- img src="#" alt="logo" class="homeLogo" -->
 		</div>
 		<div class="col-sm-10">
-			<!-- This space left intentionally blank -->
 		</div>
 	</div>
+	 -->
 </div>
 
 <div class="main-body">
 <div class="opener">
 	<div class="centerMe centerText">
-		<h2 class="main-title">Alexander Catinella</h2>
+		<h1>Alexander Catinella</h1>
 		<h4 class="main-title gray">Front-End Web Developer & Programmer</h4>
 		<p><img src="./img/personal-pic.png" alt="headshot photo" class="imgHeadshot"></p>
 	</div>
@@ -207,32 +309,34 @@
 	<div class="past-work-box myContainer">
 		<h2 class="centerText">Examples of my work.</h2>
 		<hr style="max-width:500px; margin:10px auto;">
-		<div class="row">
-			<div class="col-sm-4 workExample">
-				<p>Stansberry Sales Funnel</p>
-			</div>	
-			<div class="col-sm-4 workExample">
-				<p>Webinar Microsites</p>
-			</div>
-			<div class="col-sm-4 workExample">
-				<p>Optin Pages & Call To Actions (CTAs)</p>
-			</div>
+		<div class="row bigCenter">
+				<div class="col-sm-4 workExample stansberryLogo">
+					<a href="https://acatin123.github.io/example.portfolio/past-work/SB-funnel/VSL_example.html" target="_blank"><p class="stbFont">Stansberry Front-End Sample</p></a>
+				</div>	
+				<div class="col-sm-4 workExample mattMcCall">
+					<a href="https://acatin123.github.io/example.portfolio/past-work/10xMicro/index.html" target="_blank"><p class="mcFont">Webinar Microsite Sample</p></a>
+				</div>
+				<div class="col-sm-4 workExample gUmi">
+					<a href="https://aoshi-stark.itch.io/galactic-umi" target="_blank"><p class="gUmiFont">Galactic Umi Vertical Slice Project</p>
+				</div>
+				
 		</div>
 	</div>
-	<div class="reference-box myContainer">
+	
+	<!-- <div class="reference-box myContainer">
 		<p>add here carousel of References w/ possible quote?</p>
-	</div>
+	</div> -->
+	
 	<div class="signOff-box myContainer">
-		<p>Sign-Off w/ Contact Information</p>
+		<p class="goodbyeText">Thank you for visiting my site!</p>
+		<p class="contactInfo">If you'd like to contact me, you may email me at <a href="mailto:alexander.catinella@gmail.com">alexander.catinella@gmail.com</a>,<br> call me at 410-441-0730, or message me through my LinkedIn profile below.</p>
 	</div>
 </div>
 <!-- End of Body -->
 </body>
 <footer>
-<p class="footIcon blue"><a href="https://www.linkedin.com/in/alexander-catinella-01460191/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></p>
-<div class="footContainer">
-	<p>Personal Quote</p>
-	<p>LinkedIn profile icon?<p>
+<p class="ftIcon blue"><a href="https://www.linkedin.com/in/alexander-catinella-01460191/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></p>
+<div class="ftContainer">
 	<p>Created by me &#169; 2023</p>
 </div>
 </footer>

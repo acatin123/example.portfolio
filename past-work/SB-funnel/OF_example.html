@@ -1,0 +1,828 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+    <title></title>
+    <!-- Put CSS Calls here -->
+    <link href="https://secure-prod-assets.s3.amazonaws.com/common/css/bootstrap/bootstrap.min.4.3.1.css" rel="stylesheet">
+    <link href="https://s3.amazonaws.com/assets.stansberryresearch.com/mkt/SIR/digerati/psi-digerati.css" rel="stylesheet">
+    <link href="https://secure-prod-assets.s3.amazonaws.com/common/css/subscription-grid.css" rel="stylesheet">
+    <link href="https://secure-prod-assets.s3.amazonaws.com/common/css/elements.css" rel="stylesheet">
+    <link href="https://secure-prod-assets.s3.amazonaws.com/common/css/brand-header.css" rel="stylesheet">
+    <!-- Put Javascript Calls here -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="https://secure-prod-assets.s3.amazonaws.com/common/fontawesome/js/all.js"></script>
+    <script>
+        var urlParams;
+         (window.onpopstate = function () {
+            var match,
+                pl     = /\+/g,  // Regex for replacing addition symbol with a space
+                search = /([^&=]+)=?([^&]*)/g,
+                decode = function (s) { return decodeURIComponent(s.replace(pl, " ")); },
+                query  = window.location.search.substring(1); 
+            urlParams = {};
+            while (match = search.exec(query))
+               urlParams[decode(match[1])] = decode(match[2]);
+         })();
+
+            /* General Event Data    
+            dataLayer.push({
+            'event':'EVENT NAME',  
+            'campaign':globalStoreData.site.campaignInfo[0].slice(7),  
+            'gaPageTitle':'PUB Campaign ASSETTYPE',  
+            'gaPageView':'/PUB-Campaign-ASSETTYPE/' + urlParams["cid"] + '/' + urlParams["eid"],  
+            'eid':urlParams["eid"],  
+            'cid':urlParams["cid"],  
+            'pubcode':'PUB'  
+            }); 
+            */
+    </script>
+
+    <style>
+        /* order form things */
+@font-face {
+    font-family: "Gibson";
+    src: url("https://marketingassets.cloudsna.com/prod/fonts/stansberry/gibson/gibson-webfont.eot?#iefix") format("eot"), url("https://marketingassets.cloudsna.com/prod/fonts/stansberry/gibson/gibson-webfont.woff") format("woff"), url("https://marketingassets.cloudsna.com/prod/fonts/stansberry/gibson/gibson-webfont.ttf") format("truetype");
+}
+    @font-face {
+        font-family: "Gibson-SemiBold";
+        src: url("https://marketingassets.cloudsna.com/prod/fonts/stansberry/gibson/gibson-semibold-webfont.eot?#iefix") format("eot"), url("https://marketingassets.cloudsna.com/prod/fonts/stansberry/gibson/gibson-semibold-webfont.woff") format("woff"), url("https://marketingassets.cloudsna.com/prod/fonts/stansberry/gibson/gibson-semibold-webfont.ttf") format("truetype");
+    }
+    @font-face {
+        font-family: "Gibson";
+        src: url("https://marketingassets.cloudsna.com/prod/fonts/stansberry/gibson/gibson-webfont.eot?#iefix") format("eot"), url("https://marketingassets.cloudsna.com/prod/fonts/stansberry/gibson/gibson-webfont.woff") format("woff"), url("https://marketingassets.cloudsna.com/prod/fonts/stansberry/gibson/gibson-webfont.ttf") format("truetype");
+    }
+
+		span.price-crossout{
+			font-family: "Gibson",arial,sans-serif;
+			font-size: 28px;
+			position: relative;
+			display: inline-block;
+		}
+		span.price-crossout::before{
+			content: '';
+			border-bottom: 3px solid #cc0000;
+			width: 100%;
+			position: absolute;
+			right: 0;
+			top: 50%;
+		}
+body, html {
+  margin: 0;
+  height: 100%;
+  position: relative;
+}
+.disclaimer {
+    font-size: 22px;
+    font-family: "Gibson", arial, sans;
+    line-height: 28px;
+}
+article {
+  height: auto;
+  min-height: 100%;
+}
+/*  J.K. edit May-18-2020: old code was max-width: 750px; * -Removed max-widths to the section - added it via classes.
+ it limits what you can do in the future. in this case, the max-width should have been added to the #copy-content */
+section {
+  width: 100%;
+  padding: 0 10px 0 10px;
+  margin: 0 auto;
+  border: none;
+}
+#copy-content{max-width: 750px; }
+    strong{
+        font-family: "Gibson-SemiBold", serif !important;
+    }
+    p, ol, li {
+    margin: 0 0 20px;
+}
+    .main-middle.order-form{
+        padding-top:0;
+    }
+    .top-header{
+        height:auto;
+        position: inherit;
+        margin-bottom: 0;
+    }
+    .responsive {
+      max-width: 550px;
+      width: 100%;
+      height: auto;
+    }
+    .testSig{
+    font-family: "ProximaNova-Bold",arial,sans-serif;
+    font-size: 18px;
+    text-align: right;
+    padding: 10px 50px 20px 0px;
+    margin-right: 30px;
+}
+    .bullet{
+        background-position-y: 0px !important;
+    }
+    .number-big{font-size:30px;color:#135B09;}
+    #title h1{
+        padding: 20px 0px;
+        font-family: "Gibson-SemiBold",arial,sans-serif;
+    }
+    #title h2{
+        font-family: "Gibson",arial,sans-serif;
+    }
+    #copy-content h2{
+        text-align:center;
+        padding-bottom: 20px;
+    }
+    #price-choice{
+        max-width:none;
+    }
+.col-content.centered-wide{
+	padding-bottom: 40px;
+	max-width: 800px;
+	background-color: #fff;
+	padding-top: 40px;
+	float: none;
+	margin: 0 auto;
+	width: 100%;
+}
+.storeOF {
+    border: 2px solid #ccc;
+	background-color: #f7f7f7;
+    vertical-align: middle;
+    box-sizing: border-box;
+    width: 100%;
+    opacity: 0.7;
+    padding: 22px;
+    margin: 0 auto 20px;
+    position: relative;
+	border-radius: 8px;
+    /*-webkit-transition: all .2s ease;
+    transition: all .2s ease;*/
+}
+.storeOF.selected {
+    border: 2px solid #166a16;
+	background-color: #ffffff;
+	box-shadow: 0 0 6px rgba(0,0,0,0.3);
+    opacity: 1;
+}
+.storeOF:hover {
+    opacity: 1;
+}
+input[type=checkbox], input[type=radio ] {
+    width: 28px;
+    margin: 0;
+    position: absolute;
+    padding: 0;
+    top: 18px;
+    left: 22px;
+}
+input[type=checkbox] + label, input[type=radio] + label {
+    border: 2px solid #ccc;
+    cursor: pointer;
+    display: block;
+    opacity: 0.5;
+    padding: 34px 20px 40px;
+    position: relative;
+    line-height: 29px !important;
+    margin-bottom: 0;
+}
+input[type=checkbox] + label:hover, input[type=radio] + label:hover {
+    opacity: 1;
+}
+input[type=radio]:not(old):checked + label {
+    border: 2px solid #004a87;
+    background-position: 0 -28px !important;
+    opacity: 1;
+}
+input[type=radio]:checked::before, input[type=checkbox]:checked::before {
+	background: url("https://secure-prod-assets.s3.amazonaws.com/common/icons/radio-large-selected.png") #fff no-repeat scroll left 10px / 44px;
+}
+input[type=radio]::before, input[type=checkbox]::before {
+    content: "";
+    cursor: pointer;
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    width: 50px;
+    height: 60px;
+    top: -5px;
+	background: url("https://secure-prod-assets.s3.amazonaws.com/common/icons/radio-large.png") #f7f7f7 no-repeat scroll left 10px / 44px;
+}
+.storeOF .breakdown {
+    font-family: "Gibson-SemiBold",arial,sans-serif;
+    border-bottom: 1px solid #ccc;
+    color: #a0a0a0;
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: 14px;
+    margin-bottom: 10px;
+    padding-bottom: 4px;
+    margin-left: 60px;
+}
+.storeOF .breakdown-desc{
+    font-family: "Gibson",arial,sans-serif;
+    font-size: 20px;
+    line-height: 24px;
+    margin-top: 14px;
+    margin-bottom: 10px;
+    padding-bottom: 0;
+    margin-left: 4px;
+}
+.storeOF .breakdown-desc-bold{
+    font-family: "Gibson-SemiBold",arial,sans-serif;
+    font-size: 20px;
+    line-height: 24px;
+    margin-top: 14px;
+    margin-bottom: 10px;
+    padding-bottom: 0;
+    margin-left: 4px;
+}
+.storeOF .breakdown-desc-small{
+    font-family: "Gibson",arial,sans-serif;
+    font-size: 18px;
+    line-height: 22px;
+    margin-top: 10px;
+    margin-bottom: 14px;
+    padding-bottom: 0;
+    margin-left: 4px;
+}
+.order-summary {
+    position: absolute;
+    font-family: "Gibson-SemiBold",arial,sans-serif;
+    background-color: #004a87;
+    color: #fff;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 6px 0;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 6px;
+}
+table.offer {
+    font-family: "Gibson-SemiBold",arial,sans-serif;
+    font-size: 22px;
+    margin-left: 60px;
+}
+table.offer th {
+    width: 340px;
+    line-height: 19px;
+}
+.best-deal-right {
+    position: absolute;
+    width: 100px;
+    top: 37px;
+    right: 0;
+}
+.discount-name {
+    font-size: 16px;
+    padding-top: 6px;
+    padding-left: 10px;
+}
+.discount-value {
+    font-size: 16px;
+    padding-top: 6px;
+}
+.list-price {
+    font-family: "Gibson-SemiBold",arial,sans-serif;
+    margin-left: -4px;
+}
+.your-price {
+    border-top: solid 1px #ddd;
+    font-size: 30px;
+}
+.final-price {
+    color: #007928;
+    position: relative;
+}
+.final-price::before {
+    content: "";
+    position: absolute;
+    background-image: url(https://s3.amazonaws.com/hopstatic/images/red-circle.png);
+    background-size: 120px;
+    background-repeat: no-repeat;
+    width: 120px;
+    height: 120px;
+    left: -30px;
+    top: -14px;
+}
+	.deal-tabs{
+		position: absolute;
+		width: 100px;
+		top: 0;
+		right: 0;
+		border-top-right-radius: 6px;
+	}
+	.deal-tabs.best-deal{
+		width: 116px;
+	}
+	img.price-choice-bundle{
+		height: 100px; 
+		float: right;
+		margin-top: -10px;
+	}
+	
+.storeOF h3 {
+    font-size: 36px;
+	line-height: 38px;
+	margin: 4px 50px 0 60px;
+	color: #111111;
+}
+.storeOF h4 {
+    font-family: "Gibson-SemiBold",arial,sans-serif;
+    font-size: 28px;
+	line-height: 30px;
+    margin: 2px 0 4px 60px;
+	color: #cc0000;
+}
+.storeOF p, .add-on p {
+    text-align: left;
+    margin: 0 0 5px 70px;
+    font: normal 18px/22px 'Gibson', sans-serif;
+    color: #333333;
+    padding-bottom: 10px;
+}
+	.storeOF li{
+		text-align: left;
+		font: normal 18px/22px 'Gibson', sans-serif;
+		color: #333333;
+		padding-left: 4px;
+	}
+	.storeOF li strong{
+		font-family: "Gibson-SemiBold", sans-serif;
+	}
+.storeOF p strong, .add-on strong {
+    font-family: "Gibson-SemiBold",arial,sans-serif;
+}
+.storeOF p.bullets {
+    padding-left: 30px;
+    margin-left: 10px;
+    margin-bottom: 0;
+    padding-top: 3px;
+    background: transparent url(https://hopstatic.s3.amazonaws.com/images/bullet-check.png) no-repeat scroll 0 5px / 18px;
+}
+	.storeOF p:last-child{
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+.best-deal {
+    position: absolute;
+    width: 150px;
+    right: 0;
+    top: 0;
+}
+.your-price {
+    color: #166a16;
+}
+.add-on {
+    border: 2px solid #166a16;
+    padding: 40px 20px 40px;
+    margin: 10px 0 30px;
+    width: 100%;
+    position: relative;
+}
+.add-on .order-summary {
+    background-color: #166a16;
+}
+.add-on p {
+    text-align: left;
+    margin: 0 0 12px 0;
+    font-family: "Gibson", sans-serif;
+    font-size: 20px;
+    line-height: 26px;
+    color: #111111;
+    padding-bottom: 10px;
+}
+.optional-container {
+    position: relative;
+}
+.optional-container .red-arrow {
+    position: absolute;
+    width: 70px;
+    left: -40px;
+    top: -50px;
+    -webkit-transform: rotate(50deg);
+    transform: rotate(50deg);
+    z-index: 99;
+}
+.optionalBundle {
+    top: 0 !important;
+    left: 0 !important;
+}
+h3.cta {
+    padding-left: 60px;
+    font-size: 26px;
+}
+	.highlight{
+		background-color: #fffc00;
+	}
+#title h1 {
+  text-align: center;
+  margin: 0 0 8px;
+  padding: 0 30px;
+  text-shadow: none;
+  font: bold 50px/1.1 "Gibson-SemiBold", serif;
+  color: #111;
+}
+
+#title h2 {
+
+  text-align: center;
+  margin: 0 0 8px;
+  padding: 0 30px;
+  text-shadow: none;
+  font:  bold 40px/1.1 "Gibson-SemiBold", serif;
+  color: #111;
+}
+
+@media screen and (max-width: 480px) {
+.storeOF .breakdown, table.offer, .storeOF p.bullets, .storeOF p {
+    margin-left: 0;
+}
+	img.price-choice-bundle{
+		display: none;
+	}
+	.storeOF h3{
+		font-size: 32px;
+		line-height: 36px;
+	}
+	.storeOF h4{
+		font-size: 22px;
+		line-height: 26px;
+	}
+	.storeOF .breakdown-desc{
+		font-size: 18px;
+		line-height: 22px;
+	}
+	.storeOF .breakdown-desc-small, .storeOF li{
+		font-size: 16px;
+		line-height: 20px;
+	}
+	.deal-tabs{
+		width: 90px;
+	}
+	.deal-tabs.best-deal{
+		width: 100px;
+	}
+}
+@media screen and (max-width: 360px) {
+		input[type=checkbox], input[type=radio ] {
+			top: 14px;
+			left: 18px;
+		}
+		input[type=radio]:checked::before, input[type=checkbox]:checked::before {
+			background-size: 40px;
+		}
+		input[type=radio]::before, input[type=checkbox]::before {
+			background-size: 40px;
+		}
+		.storeOF{
+			padding: 18px;
+		}
+		.storeOF h3 {
+			font-size: 26px;
+			line-height: 28px;
+			margin-right: 48px;
+			margin-left: 50px;
+		}
+		.storeOF h4{
+			font-size: 20px;
+			line-height: 24px;
+			margin-right: 40px;
+			margin-left: 50px;
+		}
+	}
+    </style>
+</head>
+
+<body>
+<article>
+	<header class="top-header">
+		<div class="row header-row">
+			<div class="col-lg-6 col-12"><img alt="Logo" class="header-logo left" src="https://static.cloudsna.com/store/PROD/images/RonPaul/Stansberry_Logo_White.png" /></div>
+			<div class="col-lg-6 col-12">
+				<h2 class="header-text"><img alt="security lock" class="secure-order" src="https://secure-prod-assets.s3.amazonaws.com/common/icons/lock-white.png" />Secure Order Form</h2>
+			</div>
+		</div>
+	</header>
+	<div class="main-middle order-form">
+		<!-- Header titles-->
+		<section id="title">
+			<h4 style="text-align: center;"><br />SPECIAL 1-HOUR OFFER FOR EVENT ATTENDEES ONLY</h4>
+			<h1 style="text-align: center; padding-bottom: 20px;">Act before the timer expires and receive…</h1>
+		</section>
+		<!-- All body copy-->
+		<section id="copy-content">
+			<ul style="list-style: none;">
+				<li class="bullet check">1 Year of <em>True Wealth </em>for <span style="text-decoration: line-through;">$199</span> <span style="color: #ff0000;"><strong>$49</strong></span> (75% discount)</li>
+				<li class="bullet check">1 <strong>FREE</strong> bonus year of <em>Matt McCall’s Investment Opportunities </em>(a $99 value)</li>
+				<li class="bullet check">Access to Dr. Steve Sjuggerud’s model portfolio of some of his favorite Melt Up Stocks</li>
+				<li class="bullet check">Your <strong>FREE</strong> copy of <em>The 2020 Melt Up Blueprint </em></li>
+				<li class="bullet check">Your <strong>FREE</strong> copy of <em>Five Stocks That Could Soar During the Melt Up </em></li>
+				<li class="bullet check">Your <strong>FREE</strong> copy of <em>How to Get Out Before the Crash </em></li>
+				<li class="bullet check"><strong>Steve’s 100% risk-free guarantee</strong></li>
+				<li class="bullet check">And more! (details below)</li>
+			</ul>
+			<p><img src="https://secure-prod-assets.s3.amazonaws.com/common/icons/check-orange-chunky-square.png" style="height: 48px; position: relative; top: -6px;" alt="checkbox" /> <strong>YES!</strong> Sign me up for True Wealth at the special price of just
+				<span style="text-decoration: line-through;">$199</span> <strong>$49.</strong></p>
+			<p>I understand I’m getting 75% off the regular price by acting on the Last Bull Market Event’s 1-hour-only fast-action bonus.</p>
+			<p>I understand I’m entitled to $99 in bonus research from by acting right now.</p>
+		</section>
+		<!--begin grid compare box 1-->
+		<section class="price-grid" style="padding: 0; margin-bottom: 20px;">
+			<h2 class="pg-mobile-title">Compare Subscription Levels</h2>
+			<div class="container-fluid" style="padding: 0;">
+				<div class="row pg-head align-items-start">
+					<div class="col-lg-7 pg-content" style="padding-left: 0;"><img alt="red arrow" class="red-arrow" src="https://s3.amazonaws.com/assets.stansberryresearch.com/mkt/trw/last-bull-market-event/imgs/red-arrow.png" />
+						<h2>Compare Subscription Levels 1</h2>
+					</div>
+					<div class="col pg-content">
+						<div>
+							<p class="grid-title" style="border-bottom-color: #6b757e;">Standard</p>
+							<p class="pg-price-crossout"><span>$199</span></p>
+							<p class="pg-price">$49</p>
+						</div>
+					</div>
+					<div class="col pg-content" style="padding: 0; z-index: 2;">
+						<p class="value-label">Most Popular</p>
+						<div>
+							<p class="grid-title" style="border-bottom-color: #166a16;">Premium</p>
+							<p class="pg-price-crossout"><span>$199</span></p>
+							<p class="pg-price">$79</p>
+						</div>
+					</div>
+					<div class="col pg-content" style="padding: 0;">
+						<div style="padding-top: 0;">
+							<p class="value-label secondary-value">Best Value</p>
+							<p class="grid-title" style="border-bottom-color: #aa8a19;">Deluxe</p>
+							<p class="pg-price-crossout"><span>$199</span></p>
+							<p class="pg-price">$129</p>
+						</div>
+					</div>
+				</div>
+				<div class="row pg-body align-items-stretch">
+					<div class="col-lg-7 pg-content d-flex align-items-center">
+						<p><strong>One Full Year of</strong> <em>True Wealth</em></p>
+					</div>
+					<div class="col d-flex align-items-center justify-content-center">
+						<p class="pg-icon"><span style="color: #509444; font-size: 22px;"><i class="fas fa-check"></i></span></p>
+					</div>
+					<div class="col d-flex align-items-center justify-content-center">
+						<p class="pg-icon"><span style="color: #509444; font-size: 22px;"><i class="fas fa-check"></i></span></p>
+					</div>
+					<div class="col d-flex align-items-center justify-content-center">
+						<p class="pg-icon"><span style="color: #509444; font-size: 22px;"><i class="fas fa-check"></i></span></p>
+					</div>
+				</div>
+				<div class="row pg-body align-items-stretch">
+					<div class="col-lg-7 pg-content d-flex align-items-center">
+						<p><strong>One FREE Year of</strong> <em>Matt McCall’s Investment Opportunities</em></p>
+					</div>
+					<div class="col d-flex align-items-center justify-content-center">
+						<p class="pg-icon"><span style="color: #509444; font-size: 22px;"><i class="fas fa-check"></i></span></p>
+					</div>
+					<div class="col d-flex align-items-center justify-content-center">
+						<p class="pg-icon"><span style="color: #509444; font-size: 22px;"><i class="fas fa-check"></i></span></p>
+					</div>
+					<div class="col d-flex align-items-center justify-content-center">
+						<p class="pg-icon"><span style="color: #509444; font-size: 22px;"><i class="fas fa-check"></i></span></p>
+					</div>
+				</div>
+				<div class="row pg-body align-items-stretch">
+					<div class="col-lg-7 pg-content d-flex align-items-center">
+						<p><u><strong>Special Report:</strong></u> <em>The 2020 Melt Up Blueprint</em></p>
+					</div>
+					<div class="col d-flex align-items-center justify-content-center">
+						<p class="pg-icon"><span style="color: #509444; font-size: 22px;"><i class="fas fa-check"></i></span></p>
+					</div>
+					<div class="col d-flex align-items-center justify-content-center">
+						<p class="pg-icon"><span style="color: #509444; font-size: 22px;"><i class="fas fa-check"></i></span></p>
+					</div>
+					<div class="col d-flex align-items-center justify-content-center">
+						<p class="pg-icon"><span style="color: #509444; font-size: 22px;"><i class="fas fa-check"></i></span></p>
+					</div>
+				</div>
+				<div class="row pg-body align-items-stretch">
+					<div class="col-lg-7 pg-content d-flex align-items-center">
+						<p><u><strong>Special Report:</strong></u> <em>How to Get Out Before the Crash</em></p>
+					</div>
+					<div class="col d-flex align-items-center justify-content-center">
+						<p class="pg-icon"><span style="color: #509444; font-size: 22px;"><i class="fas fa-check"></i></span></p>
+					</div>
+					<div class="col d-flex align-items-center justify-content-center">
+						<p class="pg-icon"><span style="color: #509444; font-size: 22px;"><i class="fas fa-check"></i></span></p>
+					</div>
+					<div class="col d-flex align-items-center justify-content-center">
+						<p class="pg-icon"><span style="color: #509444; font-size: 22px;"><i class="fas fa-check"></i></span></p>
+					</div>
+				</div>
+				<div class="row pg-body align-items-stretch">
+					<div class="col-lg-7 pg-content d-flex align-items-center">
+						<p><u><strong>Free Bonus Report:</strong></u> <em>Five Stocks That Could Soar During the Melt Up</em></p>
+					</div>
+					<div class="col d-flex align-items-center justify-content-center">
+						<p class="pg-icon"><span style="color: #509444; font-size: 22px;"><i class="fas fa-check"></i></span></p>
+					</div>
+					<div class="col d-flex align-items-center justify-content-center">
+						<p class="pg-icon"><span style="color: #509444; font-size: 22px;"><i class="fas fa-check"></i></span></p>
+					</div>
+					<div class="col d-flex align-items-center justify-content-center">
+						<p class="pg-icon"><span style="color: #509444; font-size: 22px;"><i class="fas fa-check"></i></span></p>
+					</div>
+				</div>
+				<div class="row pg-body align-items-stretch">
+					<div class="col-lg-7 pg-content d-flex align-items-center">
+						<p><strong><span style="text-transform: uppercase; font-size: .75em; background-color: #166a16; color: #ffffff; padding: 2px 6px; border-radius: 3px; position: relative; top: -2px; margin-right: 2px;">Premium</span> <u>Bonus Report:</u></strong> <em>The No. 1 Gold Stock to Buy in 2020</em></p>
+					</div>
+					<div class="col d-flex align-items-center justify-content-center">
+						<p class="pg-icon"><span style="color: #bbbbbb; font-size: 22px;"><i class="fas fa-times"></i></span></p>
+					</div>
+					<div class="col d-flex align-items-center justify-content-center">
+						<p class="pg-icon"><span style="color: #509444; font-size: 22px;"><i class="fas fa-check"></i></span></p>
+					</div>
+					<div class="col d-flex align-items-center justify-content-center">
+						<p class="pg-icon"><span style="color: #509444; font-size: 22px;"><i class="fas fa-check"></i></span></p>
+					</div>
+				</div>
+				<div class="row pg-body align-items-stretch">
+					<div class="col-lg-7 pg-content d-flex align-items-center">
+						<p><strong><span style="text-transform: uppercase; font-size: .75em; background-color: #166a16; color: #ffffff; padding: 2px 6px; border-radius: 3px; position: relative; top: -2px; margin-right: 2px;">Premium</span> <u>Bonus Report:</u></strong> <em>The Great China Trade: How to Make Triple-Digit Gains on the Greatest Index Inclusion in History</em></p>
+					</div>
+					<div class="col d-flex align-items-center justify-content-center">
+						<p class="pg-icon"><span style="color: #bbbbbb; font-size: 22px;"><i class="fas fa-times"></i></span></p>
+					</div>
+					<div class="col d-flex align-items-center justify-content-center">
+						<p class="pg-icon"><span style="color: #509444; font-size: 22px;"><i class="fas fa-check"></i></span></p>
+					</div>
+					<div class="col d-flex align-items-center justify-content-center">
+						<p class="pg-icon"><span style="color: #509444; font-size: 22px;"><i class="fas fa-check"></i></span></p>
+					</div>
+				</div>
+				<div class="row pg-body align-items-stretch">
+					<div class="col-lg-7 pg-content d-flex align-items-center">
+						<p><strong><span style="text-transform: uppercase; font-size: .75em; background-color: #166a16; color: #ffffff; padding: 2px 6px; border-radius: 3px; position: relative; top: -2px; margin-right: 2px;">Premium</span> <u>Bonus Report:</u></strong> <em>The Block-Wave Investor’s Guide</em></p>
+					</div>
+					<div class="col d-flex align-items-center justify-content-center">
+						<p class="pg-icon"><span style="color: #bbbbbb; font-size: 22px;"><i class="fas fa-times"></i></span></p>
+					</div>
+					<div class="col d-flex align-items-center justify-content-center">
+						<p class="pg-icon"><span style="color: #509444; font-size: 22px;"><i class="fas fa-check"></i></span></p>
+					</div>
+					<div class="col d-flex align-items-center justify-content-center">
+						<p class="pg-icon"><span style="color: #509444; font-size: 22px;"><i class="fas fa-check"></i></span></p>
+					</div>
+				</div>
+				<div class="row pg-body align-items-stretch">
+					<div class="col-lg-7 pg-content d-flex align-items-center">
+						<p><strong><span style="text-transform: uppercase; font-size: .75em; background-color: #aa8a19; color: #ffffff; padding: 2px 6px; border-radius: 3px; position: relative; top: -2px; margin-right: 2px;">Deluxe</span> Library of 3 Deluxe Bonus Reports</strong></p>
+					</div>
+					<div class="col d-flex align-items-center justify-content-center">
+						<p class="pg-icon"><span style="color: #bbbbbb; font-size: 22px;"><i class="fas fa-times"></i></span></p>
+					</div>
+					<div class="col d-flex align-items-center justify-content-center">
+						<p class="pg-icon"><span style="color: #bbbbbb; font-size: 22px;"><i class="fas fa-times"></i></span></p>
+					</div>
+					<div class="col d-flex align-items-center justify-content-center">
+						<p class="pg-icon"><span style="color: #509444; font-size: 22px;"><i class="fas fa-check"></i></span></p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--end grid 1-->
+		<section id="copy-content">
+			<h2 style="text-align: center;"><strong><span style="color: #000000;">Here’s a complete breakdown of </span></strong><br /><strong><span style="color: #000000;">everything I’ll get when I subscribe:</span></strong></h2>
+			<p><strong><u>One Full Year of <em>True Wealth </em></u></strong></p>
+			<div class="row" style="margin-bottom: 20px;">
+				<div class="col-lg-3 col-md-3 col-sm-12"><img style="max-width: 300px; height: auto;" src="https://s3.amazonaws.com/assets.stansberryresearch.com/mkt/trw/SUG/TRW+REP3+Render.jpg" alt="TRW" class="responsive" /></div>
+				<div class="col-lg-9 col-md-9 col-sm-12">
+					<p>All of the investment opportunities you need to begin making the most money during the final stage of the Melt Up, including 15 recommendations that are currently in “buy” mode.</p>
+				</div>
+			</div>
+			<p><strong><u>One FREE Year of <em>Matt McCall’s Investment Opportunities </em></u></strong></p>
+			<div class="row" style="margin-bottom: 20px;">
+				<div class="col-lg-3 col-md-3 col-sm-12"><img style="max-width: 300px; height: auto;" src="https://secure-prod-assets.s3.amazonaws.com/content/affiliates/ipm/investment-opportunities-tablet.png" alt="Investment Ops" class="responsive" /></div>
+				<div class="col-lg-9 col-md-9 col-sm-12">
+					<p>An entire model portfolio of “shoot for the moon” recommendations is yours FREE when you act today. This includes all of the sectors that Matt and Steve agree could soar higher than anything else in the months to come – tech stocks, biotech stocks,
+						cannabis stocks, and cryptocurrencies.</p>
+				</div>
+			</div>
+			<p><strong><u>Special Report: <em>The 2020 Melt Up Blueprint</em></u></strong></p>
+			<div class="row" style="margin-bottom: 20px;">
+				<div class="col-lg-3 col-md-3 col-sm-12"><img style="max-width: 300px; height: auto;" src="https://s3.amazonaws.com/assets.stansberryresearch.com/mkt/trw/last+bull+market/The+2020+Melt+Up+Blueprint-MAG03.png" alt="Meltup" class="responsive" /></div>
+				<div class="col-lg-9 col-md-9 col-sm-12">
+					<p>Your comprehensive guide to Steve’s favorite Melt Up investments, and exact instructions on how to buy them.</p>
+				</div>
+			</div>
+			<p><strong><u>Special Report: <em>How to Get Out Before the Crash </em></u></strong></p>
+			<div class="row" style="margin-bottom: 20px;">
+				<div class="col-lg-3 col-md-3 col-sm-12"><img style="max-width: 300px; height: auto;" src="https://s3.amazonaws.com/assets.stansberryresearch.com/mkt/trw/last+bull+market/How+to+Get+Out+Before+the+Crash-MAG03.png" alt="B4 the Crash" class="responsive" /></div>
+				<div class="col-lg-9 col-md-9 col-sm-12">
+					<p>The best way to learn how protect yourself from the inevitable Melt Down, and secure any Melt Up profits. Steve collaborated with a Berkeley-educated PhD to narrow in on the perfect time to sell each individual investment – before the crash.</p>
+				</div>
+			</div>
+			<p><strong><u>Free Bonus Report: <em>Five Stocks That Could Soar During the Melt Up</em></u></strong></p>
+			<div class="row" style="margin-bottom: 20px;">
+				<div class="col-lg-3 col-md-3 col-sm-12"><img style="max-width: 300px; height: auto;" src="https://s3.amazonaws.com/assets.stansberryresearch.com/mkt/trw/last+bull+market/Five+Stocks+That+Could+Soar+During+the+Melt+Up-MAG03.png" alt="5 Stocks" class="responsive" /></div>
+				<div class="col-lg-9 col-md-9 col-sm-12">
+					<p>After running thousands of stocks through his 10X system and analysis, Matt McCall has narrowed down the five he believes could soar anywhere from 500% to 1,000%. And he’s giving these recommendations away FREE to anyone who claims Steve’s special
+						1-hour offer right now.</p>
+				</div>
+			</div>
+			<h2><strong>I am also entitled to Steve and Matt’s 30-Day Risk-Free Guarantee</strong></h2>
+			<p>On top of giving you access to nearly $300 worth of research right now, Steve and Matt want to make sure you’re completely satisfied with your order.</p>
+			<p>So please take the next 30 days to review everything listed above – including your two model portfolios, and hundreds of back-issues and special reports. Feel free to download and print everything out. No matter what you decide, all of this research
+				is yours to keep.</p>
+			<img src="https://secure-prod-assets.s3.amazonaws.com/common/images/starburst/30-day+guarantee.png" alt="30-day" class="sidebar-image" style="margin-bottom: 20px;" />
+			<p>If you’re not 100% thrilled with your subscription, simply contact our Baltimore-based customer service team and they’ll issue you a prompt refund.</p>
+			<p>After the 30-day trial period is up, you’re still free to cancel anytime. You won’t owe a penny more.</p>
+			<p>Remember, as part of this offer, you’re also getting an entirely free year of <em>Matt McCall’s Investment Opportunities, </em>including his model portfolio filled with recommendations from some of the hottest investing trends in the world.</p>
+			<p>As the Melt Up reaches its peak in the coming months, these unique investments could skyrocket five-to-ten times higher than anything else in the market.</p>
+			<p>Matt’s helped tens of thousands of people learn how to make money off of the trends, technologies, and innovations that are shaping our future.</p>
+			<p>Like Dmitry S., who writes:</p>
+			<p class="testimonial">“<em>Investment Opportunities </em>is helping me achieve my financial goals and taking me closer to making a down payment on my dream house.”</p>
+			<p>And Bill F., who wrote in to say:</p>
+			<p class="testimonial">“Matt is the REAL DEAL! I am very, very glad to have signed up.”</p>
+			<h2><strong>Low-Price Promise:</strong></h2>
+			<p>When you sign up, you will be enrolled in our automatic renewal program. It is critical that you have constant instant access to your <em>True Wealth </em>subscription during the course of the Melt Up and subsequent Melt Down. Therefore, they will
+				automatically renew at the end of their term so you never miss an alert that could potentially save or make you a fortune. You'll always receive an email before being charged. Don't worry: You can cancel anytime. Even better: When you order today,
+				on the next page, we'll show you how you can waive all your renewal fees forever. Your bonus research does not auto-renew.</p>
+				
+				<h2>An example of a Special Report can be viewed here: <a href="https://acatin123.github.io/example.portfolio/past-work/SB-funnel/REP_example.html" target="_top">Report Example</a></h2>
+				
+			<h2 style="font-size: 40px; margin-top: 30px; margin-bottom: 20px;"><strong>Please Choose Your Subscription Level:</strong></h2>
+			<div class="row">
+				<div class="col-content centered" style="padding-top: 0;">
+					<div class="order-box">
+						<div class="signup order-form priceBorder" id="order">
+							<div>
+								<form class="store-form">
+									<div class="w3-container w3-red"> </div>
+									<div class="store-subscribe-error" style="color: red;"></div>
+									<h3>Secure Order Form</h3>
+									<div class="store-offerpricechoice"></div>
+									<div class="form-group row"><label class="col-form-label">Email*</label> <input class="form-control store-email-address" maxlength="80" type="email" placeholder="Enter email" />
+										<div class="store-email-address-error" style="color: red;">Email error</div>
+									</div>
+									<div class="form-group row store-retype-email-container"><label class="col-form-label">Retype Email*</label> <input class="form-control store-retype-email-address" maxlength="80" type="email" placeholder="Retype email" />
+										<div class="store-retype-email-address-error" style="color: red;">Email should match</div>
+									</div>
+									<div class="form-group row"><label class="col-form-label">First Name*</label> <input class="form-control store-first-name" maxlength="80" required="" type="text" placeholder="Enter first name" />
+										<div class="store-first-name-error" style="color: red;">First name is required</div>
+									</div>
+									<div class="form-group row"><label class="col-form-label">Last Name*</label> <input class="form-control store-last-name" maxlength="80" type="text" placeholder="Enter last name" />
+										<div class="store-last-name-error" style="color: red;">Last name is required</div>
+									</div>
+									<div class="form-group row"><label class="col-form-label">Address*</label> <input class="form-control store-address" maxlength="80" required="" type="text" placeholder="Enter address" />
+										<div class="store-address-error" style="color: red;">Address is required</div>
+									</div>
+									<div class="form-group row"><label class="col-form-label">Address 2</label> <input class="form-control store-address2" maxlength="80" type="text" placeholder="Enter address" /></div>
+									<div class="form-group row"><label class="col-form-label">City*</label> <input class="form-control store-city" maxlength="80" required="" type="text" />
+										<div class="store-city-error" style="color: red;">City is required</div>
+									</div>
+									<div class="form-group row"><label class="col-form-label">Country*</label><select class="form-control store-country" required="" data-default-countries="true"></select>
+										<div class="store-country-error" style="color: red;">Country is required</div>
+									</div>
+									<div class="form-group row"><label class="col-form-label">State*</label><select class="form-control store-state" data-default="1"></select>
+										<div class="store-state-error" style="color: red;">State is required</div>
+									</div>
+									<div class="form-group row"><label class="col-form-label">Postal Code*</label> <input class="form-control store-postal-code" maxlength="10" required="" type="text" />
+										<div class="store-postal-code-error" style="color: red;">Postal Code is required</div>
+									</div>
+									<div class="form-group row"><label class="col-form-label">Phone number*</label> <input class="form-control store-phone-number" maxlength="10" type="text" />
+										<div class="store-phone-number-error" style="color: red;">Phone number is required</div>
+									</div>
+									<div id="zuora_payment"></div>
+									<div class="form-group row"><button class="btn btn-primary store-submit" type="button">Submit</button></div>
+									<p>[PLEASE NOTE - As this is an Example document, the Order Button will not work when clicked. Thank you.]</p>
+								</form>
+							</div>
+						</div>
+						<div class="disclaimer">By clicking on the submit button, you are agreeing to our <a href="https://stansberryresearch.com/terms-of-use">Terms of Use</a> and <a href="https://stansberryresearch.com/privacy-policy">Privacy Policy</a>, to receive our promotional emails, and
+							you will be billed $9. No debit cards please. Sales tax will be added to orders placed from states where we are required to collect sales tax. For additional information about sales tax, please go to our <a href="http://www.stansberryresearch.com/sales-tax"
+							 target="_blank" rel="noopener noreferrer">tax information page</a> or call Member Services at (888) 261-2693.</div>
+					</div>
+					<div class="secure-container">
+						<div class="secure-column" style="border-right: 1px solid #ccc;"><img class="shield" src="https://static.cloudsna.com/store/PROD/images/MultiStepOF2017/Shield_Icon.png" />
+							<h3>Your Information Is Safe</h3>
+							<p>We will not add your name to our e-mail list without your permission. We will not sell, rent, or otherwise share your e-mail address with anyone.</p>
+							<img class="lock" src="https://static.cloudsna.com/store/PROD/images/MultiStepOF2017/Lock_Icon.png" />
+							<h3>Secure Checkout</h3>
+							<p>100% Protected. SSL Protocol. All information is encrypted and transmitted without risk using a Secure Sockets Layer protocol.</p>
+						</div>
+						<div class="secure-column"><img class="customer-service" src="https://static.cloudsna.com/store/PROD/images/MultiStepOF2017/CS_Icon.png" />
+							<h3>Need Help?</h3>
+							<p>Call Us at (888) 261-2693<br /> 9am – 5pm EST<br /> Monday – Friday</p>
+							<p>Email us anytime at:<br /> <a href="mailto:info@stansberrycustomservice.com" target="_top">info@stansberrycustomerservice.com</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+</article>
+<footer>
+	<div class="bottom-footer">
+		<p>© 2020 Stansberry Research</p>
+	</div>
+</footer>
+</body>
+</html>
