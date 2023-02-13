@@ -2,27 +2,29 @@
 <html lang="en">
 <title>Alex Portfolio</title>
 <head>
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"></link>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css"></link>
 	
 	<style>
 		body{background-color:#FFF;}
 		p{
 			font:"Times", arial, serif;
 			font-size:20px;
-			margin-bottom:10px;
 			text-align:left;
+			margin-bottom:0;
 		}
 		footer{
 			display:block;
 			width:100%;
 			padding: 20px auto;
 			background-color:#74C365;
-			border-top: solid 2px #539d45;
+			border-top: solid 1px #539d45;
 		}
 		.header{
 			width:100%;
 			display:block;
-			padding:20px 0;
+			background-color:#74C365;
+			border-bottom: solid 1px #539d45;
 		}	
 		.myContainer{
 			display:block;
@@ -30,10 +32,32 @@
 			text-align: left;
 			width: 80%;
 		}
+		.smallContainer{
+			display:inherit;
+			max-width:40vw;
+			margin: 0 auto;
+		}
+		.footContainer{
+			display:block;
+			margin:0 auto;
+			width: 80%;
+		}
+		h2.main-title{
+			/* padding-top:20px; */ 
+			margin-bottom:10px;
+		}
 		.homeLogo{
 			display:inline-block;
-			width:20vw;
-			margin: 10px auto 10px 30px;
+			font-size: 30px;
+			margin: 5px 0 5px 20px;
+			color: #FFF;
+			background-color: #e3e3e3;
+			padding: 10px;
+			border: solid 2px black;
+			border-radius: 20px;
+		}
+		.opener{
+			margin: 30px auto;
 		}
 		.imgHeadshot{
 			display:block;
@@ -44,7 +68,69 @@
 			border-radius:200px;
 			box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
 		}
-		.gray{color: #bcbcbc;}
+		.greeting-box{
+			background-color:#38761d;
+			width:100%;
+			padding: 30px 0;
+		}
+		.greeting-box p{
+			text-align:justify;
+			color:#FFF;
+		}
+		.goals-box{
+			width:75%;
+			background-color:#FFF;
+			margin:0 auto;
+			border-radius:15px;
+			border: solid 1px #e8e8e8;
+		}
+		.greetingText{
+			color:#FFF;
+			font-weight:600;
+			margin-top:10px;
+			margin-bottom:30px;
+		}
+		.careerBox{
+			padding:20px;
+			background-color:#FFF;
+			margin:10px auto;
+			max-width: 400px;
+		}
+		.careerBox hr{
+			max-width:50%;
+			margin:0 auto 20px;
+		}
+		.careerBox p{
+			font-size:18px;
+			text-align:center;
+			color:#000;
+			font-weight:600;
+		}
+		.careerBox h3{
+			font-size:25px;
+			text-align:center;
+			color:#000;
+		}
+		.careerBox h4{
+			font-size:20px;
+			text-align:center;
+			color:#0b5394;
+		}
+		.iconBig{font-size:50px !important;}
+		.footIcon{
+			font-size: 45px;
+			border: solid 1px #c3c3c3;
+			border-radius: 20px;
+			background-color: #FFF;
+			max-width: 70px;
+			max-height: 70px;
+			margin: 0 auto;
+			padding-left: 15px;
+			position:relative;
+			top:-35px;
+		}
+		.gray{color: #bcbcbc !important;}
+		.blue{color:#0b5394 !important;}
 		.centerMe{
 			display:block;
 			width:100%;
@@ -57,31 +143,81 @@
 <!-- Begin body -->
 <div class="header">
 	<div class="row">
-		<div class="col-sm-3" id="homeLogo">
-		<img src="#" alt="logo" class="homeLogo">
+		<div class="col-sm-2" id="homeLogo">
+		<i class="fa-solid fa-house homeLogo"></i>
+		<!-- img src="#" alt="logo" class="homeLogo" -->
 		</div>
-		<div class="col-sm-9">
+		<div class="col-sm-10">
 			<!-- This space left intentionally blank -->
 		</div>
 	</div>
 </div>
 
 <div class="main-body">
+<div class="opener">
 	<div class="centerMe centerText">
 		<h2 class="main-title">Alexander Catinella</h2>
 		<h4 class="main-title gray">Front-End Web Developer & Programmer</h4>
 		<p><img src="./img/personal-pic.png" alt="headshot photo" class="imgHeadshot"></p>
 	</div>
+</div>
 	<div class="greeting-box myContainer">
-		<h3 class="centerText">Greetings! I am Alex. Thank you for visiting my site.</h3>
-		<p>Personal statement here</p>
-		<div class="goals-box">
+		<h3 class="centerText greetingText">Greetings! I am Alex. Thank you for visiting my site.</h3>
+		<div class="smallContainer">
+		<p>My career in Computer Science began 10 years ago. Since then I've worked on hardware installation, technical support, database software, and web development. The people I've met and experiences I've had have taught me much and I hope to keep learning as I pursue my career further in the tech world. I am a determined and passionate programmer with an aim to always nail what I set my mind to perfectly.</p>
+		<p>&nbsp;</p>
+		</div>
+		<div class="goals-box row">	
 		<!-- Personal career goals/history list -->
+		<!-- <div class="row"> -->
+			<div class="col-sm-4 careerBox">
+				<p class="iconBig blue"><i class="fa-solid fa-computer"></i></p>
+				<h3>Computer Information Scientist</h3>
+				<hr>
+				<p>Nothing makes me happier than fixing bugs or solving conflicts in computer code.</p>
+				<h4>Languages I Speak:</h4>
+				<p>JAVA<br>C#<br>C++</p>
+				<h4>System Familiarity:</h4>
+				<p>Windows<br>MAC OS<br>SDLC</p>
+			</div>
+			<div class="col-sm-4 careerBox">
+				<p class="iconBig blue"><i class="fa-solid fa-globe"></i></p>
+				<h3>Front-End Web Developer</h3>
+				<hr>
+				<p>Front-End Web Developement and UI/UX is my passion.</p>
+				<h4>Code I Wrangle:</h4>
+				<p>HTML 5<br>CSS<br>JavaScript</p>
+				<h4>Tools of my Trade:</h4>
+				<p>Atom<br>Adobe Dreamweaver<br>Eclipse IDE<br>Bootstrap<br>Salesforce<br>WordPress<br>Amazon S3 Repositories<br>Google Tag Manager<br>Cloudflare</p>
+			</div>
+			<div class="col-sm-4 careerBox">
+				<p class="iconBig blue"><i class="fa-solid fa-gamepad"></i></p>
+				<h3>Hobbyist Game Development</h3>
+				<hr>
+				<p>In my spare time I enjoy coding games just as much as I enjoy playing them.</p>
+				<h4>Engines I've practiced:</h4>
+				<p>GameMaker Studio 1.4</br>GameMaker Studio 2</br>Godot Game Engine</p>
+				<h4>Project Management Equipment:</h4>
+				<p>Trello</br>MS Visio</br>GitHub</br>BitBucket</br>Tiled Editor</p>
+			</div>
+		<!-- </div> -->
 		<!-- Front-End Web Developer, Software Developer, Hobbyist Game Developer -->
 		</div>
 	</div>
 	<div class="past-work-box myContainer">
-		<p>Examples of past work here!</p>
+		<h2 class="centerText">Examples of my work.</h2>
+		<hr style="max-width:500px; margin:10px auto;">
+		<div class="row">
+			<div class="col-sm-4 workExample">
+				<p>Stansberry Sales Funnel</p>
+			</div>	
+			<div class="col-sm-4 workExample">
+				<p>Webinar Microsites</p>
+			</div>
+			<div class="col-sm-4 workExample">
+				<p>Optin Pages & Call To Actions (CTAs)</p>
+			</div>
+		</div>
 	</div>
 	<div class="reference-box myContainer">
 		<p>add here carousel of References w/ possible quote?</p>
@@ -89,13 +225,15 @@
 	<div class="signOff-box myContainer">
 		<p>Sign-Off w/ Contact Information</p>
 	</div>
-	<footer>
-		<img src="#" alt="footer logo">
-		<p>Personal Quote</p>
-		<p>LinkedIn profile icon?<p>
-		<p>Created by me &#169; 2023</p>
-	</footer>
 </div>
 <!-- End of Body -->
 </body>
+<footer>
+<p class="footIcon blue"><a href="https://www.linkedin.com/in/alexander-catinella-01460191/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></p>
+<div class="footContainer">
+	<p>Personal Quote</p>
+	<p>LinkedIn profile icon?<p>
+	<p>Created by me &#169; 2023</p>
+</div>
+</footer>
 </html>
