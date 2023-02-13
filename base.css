@@ -1,0 +1,230 @@
+		body{background-color:#FFF;}
+		p{
+			font:"Times", arial, serif;
+			font-size:20px;
+			text-align:left;
+			margin-bottom:0;
+		}
+		footer{
+			display:block;
+			width:100%;
+			padding: 20px auto;
+			background-color:#38761d;
+			border-top: solid 1px #539d45;
+		}
+		.header{
+			width:100%;
+			display:block;
+			background-color:#38761d;
+			/* background-color:#74C365; */
+			border-bottom: solid 1px #539d45;
+		}	
+		.header h1{
+			color: #FFF;
+			text-align: center;
+			padding: 10px 0;
+		}
+		.myContainer{
+			display:block;
+			margin:10px auto;
+			text-align: left;
+			width: 80%;
+		}
+		.smallContainer{
+			display:inherit;
+			max-width:40vw;
+			margin: 0 auto;
+		}
+		.ftContainer{
+			display:block;
+			margin:0 auto;
+			width: 80%;
+		}
+		h2.main-title{
+			/* padding-top:20px; */ 
+			margin-bottom:10px;
+		}
+		.homeLogo{
+			display:inline-block;
+			font-size: 30px;
+			margin: 5px 0 5px 20px;
+			color: #FFF;
+			background-color: #e3e3e3;
+			padding: 10px;
+			border: solid 2px black;
+			border-radius: 20px;
+		}
+		.opener{
+			margin: 30px auto;
+		}
+		.imgHeadshot{
+			display:block;
+			margin:10px auto;
+			width:100%;
+			max-width:10vw;
+			border: solid 2px #6c6c6c;
+			border-radius:200px;
+			box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+		}
+		.greeting-box{
+			background-color:#38761d;
+			width:100%;
+			padding: 30px 0;
+		}
+		.greeting-box p{
+			text-align:justify;
+			color:#FFF;
+		}
+		.goals-box{
+			width:75%;
+			background-color:#FFF;
+			margin:0 auto;
+			border-radius:15px;
+			border: solid 1px #e8e8e8;
+		}
+		.greetingText{
+			color:#FFF;
+			font-weight:600;
+			margin-top:10px;
+			margin-bottom:30px;
+		}
+		.careerBox{
+			padding:20px;
+			background-color:#FFF;
+			margin:10px auto;
+			max-width: 400px;
+		}
+		.careerBox hr{
+			max-width:50%;
+			margin:0 auto 20px;
+		}
+		.careerBox p{
+			font-size:18px;
+			text-align:center;
+			color:#000;
+			margin-bottom:10px;
+		}
+		.careerBox h3{
+			font-size:25px;
+			text-align:center;
+			color:#000;
+		}
+		.careerBox h4{
+			font-size:20px;
+			text-align:center;
+			color:#0b5394;
+			font-weight:600;
+		}
+		.iconBig{font-size:50px !important;}
+		.workExample{
+			height: 200px;
+			max-width: 300px;
+			border-radius: 30px;
+			margin:0 auto;
+			padding-left:5px;
+			padding-right:5px;
+		}
+		.stansberryLogo{
+			background-image:url(https://stansberryresearch.com/assets/img/publication-icon/publication-icon_theme_sr-team.svg);
+			background-repeat: no-repeat;
+			background-size: 50%;
+			background-position: center;
+			background-color: #f9f9f9;
+			border: solid 1px #e6e6e6;
+		}
+		.stbFont{
+			position: relative;
+			top: 4rem;
+			margin: 0;
+			padding: 0;
+			text-align: center;
+			font-size: 1.7rem;
+			font-weight: 700;
+			color: #000;
+			/* -webkit-text-stroke-width: 1px;
+			-webkit-text-stroke-color: #000; */
+		}
+		.mattMcCall{
+			background-image:url(./past-work/10xMicro/img/hero-bg-ebook.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			background-color: #f9f9f9;
+			border: solid 1px #e6e6e6;
+		}
+		.mcFont{
+			position: relative;
+			top: 4rem;
+			margin: 0;
+			padding: 0;
+			text-align: center;
+			font-size: 1.7rem;
+			font-weight: 700;
+			color: #FFF;
+			-webkit-text-stroke-width: 1px;
+			-webkit-text-stroke-color: #000;
+		}
+		.gUmi{
+			background-image:url(https://img.itch.zone/aW1hZ2UvMjIzOTk1LzEwNTc3NDQucG5n/original/hcmbV6.png);
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			background-color: #f9f9f9;
+			border: solid 1px #e6e6e6;
+		}
+		.gUmiFont{
+			position: relative;
+			top: 4rem;
+			margin: 0;
+			padding: 0;
+			text-align: center;
+			font-size: 1.7rem;
+			font-weight: 700;
+			color: #FFF;
+			-webkit-text-stroke-width: 1px;
+			-webkit-text-stroke-color: #000;
+		}
+		.past-work-box{
+			margin-bottom:40px;
+		}
+		.ftIcon{
+			font-size: 45px;
+			border: solid 1px #c3c3c3;
+			border-radius: 20px;
+			background-color: #FFF;
+			max-width: 70px;
+			max-height: 70px;
+			margin: 0 auto;
+			padding-left: 15px;
+			position:relative;
+			top:-35px;
+		}
+		.ftContainer p{
+			text-align:center;
+			padding-bottom:10px;
+			color:#FFF;
+			font-size:12px;
+		}
+		.contactInfo{
+			margin-bottom:20px;
+			text-align:center;
+			padding-bottom:30px;
+		}
+		.goodbyeText{
+			margin-bottom: 0;
+			padding-bottom: 5px;
+			font-weight: 600;
+			text-align:center;
+		}
+		.bigCenter{
+			margin:0 auto;
+			width:75%;
+		}
+		.gray{color: #8a8a8a !important;}
+		.blue{color:#0b5394 !important;}
+		.centerMe{
+			display:block;
+			width:100%;
+			margin: 0 auto;
+		}
+		.centerText{text-align:center;}
