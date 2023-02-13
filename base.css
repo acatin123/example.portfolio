@@ -1,4 +1,4 @@
-		body{background-color:#FFF;}
+	    body{background-color:#FFF;}
 		p{
 			font:"Times", arial, serif;
 			font-size:20px;
@@ -236,6 +236,7 @@
 			margin: 0 auto;
 		}
 		.centerText{text-align:center;}
+		
 		@media screen and (max-width:480px){
 			.imgHeadshot{max-width:30vw;}
 			.smallContainer{max-width:80vw;}
