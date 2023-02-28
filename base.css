@@ -236,10 +236,9 @@
 			margin: 0 auto;
 		}
 		.centerText{text-align:center;}
-		
-		@media screen and (max-width:480px){
-			.imgHeadshot{max-width:30vw;}
+		@media screen and (max-width:700px){
 			.smallContainer{max-width:80vw;}
+			.imgHeadshot{max-width:30vw;}
 			.careerBox p{font-size:16px;}
 			.careerBox h3{font-size:22px;}
 			.careerBox h4{font-size:18px;}		
