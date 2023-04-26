@@ -238,6 +238,11 @@
 		}
 		.gray{color: #8a8a8a !important;}
 		.blue{color:#0b5394 !important;}
+		.fullLink{
+			text-decoration:none;
+			display:block;
+			height:100%;
+		}
 		.centerMe{
 			display:block;
 			width:100%;
